@@ -1557,7 +1557,7 @@ var options2 = {
         data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
     }],
     xaxis: {
-        categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],
+        categories: ['Cash', 'Water Pump', 'Fertilizer Special Blend', 'Fertilizer Organic', 'Fertilizer NPK', 'Herbicide', 'Pesticides', 'Micro-nutrient', 'Certified Seed(Kg)', 'Knapsack Sprayer'],
     },
     colors:[ CubaAdminConfig.primary ]
 }
@@ -1594,13 +1594,18 @@ var options3 = {
         colors: ['transparent']
     },
     series: [{
-        name: 'Net Profit',
+        name: 'Land Clearing',
         data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
     }, {
-        name: 'Revenue',
+        name: 'Harrowing',
         data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-    }, {
-        name: 'Free Cash Flow',
+    }, 
+    {
+        name: 'Planting',
+        data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+    },
+    {
+        name: 'Others',
         data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
     }],
     xaxis: {
@@ -1608,7 +1613,7 @@ var options3 = {
     },
     yaxis: {
         title: {
-            text: '$ (thousands)'
+            text: 'NGN (thousands)'
         }
     },
     fill: {
@@ -2260,7 +2265,7 @@ var options8 = {
         width: 380,
         type: 'pie',
     },
-    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+    labels: ['October', 'November', 'December', 'January', 'Others'],
     series: [44, 55, 13, 43, 22],
     responsive: [{
         breakpoint: 480,
@@ -2322,9 +2327,9 @@ var options10 = {
     },
     series: [{
         name: 'Series 1',
-        data: [20, 100, 40, 30, 50, 80, 33],
+        data: [20, 100, 40, 30, 50],
     }],
-    labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    labels: ['Bicycle', 'Animal Drawn Cart ', 'Motor cycle', 'Tricycle', 'Car/trucks'],
     plotOptions: {
         radar: {
             size: 140,
@@ -2337,7 +2342,7 @@ var options10 = {
         }
     },
     title: {
-        text: 'Radar with Polygon Fill'
+        text: 'Mode of Transportation'
     },
     colors: ['#FF4560'],
     markers: {

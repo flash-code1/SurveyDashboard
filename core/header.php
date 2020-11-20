@@ -7,9 +7,9 @@
     <meta name="description" content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="../assets/images/logo/NSMT_small.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
-    <title>NSMT - <?php echo $web_title; ?></title>
+    <link rel="icon" href="../assets/images/logo/" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/" type="image/x-icon">
+    <title>Survey - <?php echo $web_title; ?></title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
@@ -192,11 +192,11 @@
         <!-- Page Sidebar Start-->
         <header class="main-nav">
             <center>
-          <div class="logo-wrapper"><a href="index.php"><img class="img-fluid for-light" src="../assets/images/logo/NSMT_large.png" height="100" width="100" alt=""><img class="img-fluid for-dark" src="../assets/images/logo/NSMT_large.png" height="100" width="100" alt=""></a>
+          <div class="logo-wrapper"><a href="index.php"><img class="img-fluid for-light" src="../assets/images/logo/" height="100" width="100" alt=""><img class="img-fluid for-dark" src="../assets/images/logo/" height="100" width="100" alt=""></a>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
             <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="grid" id="sidebar-toggle"> </i></div>
           </div>
-          <div class="logo-icon-wrapper"><a href="index.php"><img class="img-fluid" src="../assets/images/logo/NSMT_large.png" alt=""></a></div>
+          <div class="logo-icon-wrapper"><a href="index.php"><img class="img-fluid" src="../assets/images/logo/" alt=""></a></div>
           </center>
           <nav>
             <div class="main-navbar">
@@ -208,52 +208,20 @@
                   </li>
                   <li class="sidebar-title">
                     <div>
-                      <h6 class="">NSMT</h6>
-                      <p class="">Track Student Payment</p>
+                      <h6 class="">Survey Dash</h6>
+                      <p class="">Track Report on Survey</p>
                     </div>
                   </li>
                   <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather=""></i><span class="">Dashboard</span>
                       <label class="badge badge-success">1</label></a>
                     <ul class="nav-submenu menu-content">
-                      <li><a class="" href="index.php">Finance Report</a></li>
+                      <li><a class="" href="index.php">Survey Report</a></li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather=""></i><span class="">Customer Service</span>
+                  <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather=""></i><span class="">View Survey</span>
                       <label class="badge badge-success">2</label></a>
                     <ul class="nav-submenu menu-content">
-                      <li><a class="" href="#">Students</a></li>
-                      <li><a class="" href="#">Enquiry</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather=""></i><span class="">Transaction</span>
-                      <label class="badge badge-success">1</label></a>
-                    <ul class="nav-submenu menu-content">
-                      <li><a class="" href="#">Fees Payment</a></li>
-                      <!-- <li><a class="" href="#">Card Track</a></li> -->
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather=""></i><span class="">Approval</span>
-                      <label class="badge badge-success">2</label></a>
-                    <ul class="nav-submenu menu-content">
-                      <li><a class="" href="#">Fees Payment</a></li>
-                      <li><a class="" href="#">Students</a></li>
-                      <!-- <li><a class="" href="index.php">Card Track</a></li> -->
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather=""></i><span class="">Reports</span>
-                      <label class="badge badge-success">2</label></a>
-                    <ul class="nav-submenu menu-content">
-                      <li><a class="" href="#">Fees Payment</a></li>
-                      <li><a class="" href="#">Student List</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather=""></i><span class="">Configuration</span>
-                      <label class="badge badge-success">2</label></a>
-                    <ul class="nav-submenu menu-content">
-                      <!-- <li><a class="" href="#">Payment Product</a></li>
-                      <li><a class="" href="#">Payment Category</a></li>-->
-                      <li><a class="" href="institution_manager.php">Institution Management</a></li>
-                      <li><a class="" href="payment_system.php">Payment system</a></li>
+                      <li><a class="" href="#">Data Virtualization</a></li>
                     </ul>
                   </li>
                   <!-- <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather="airplay"></i><span class="lan-6">Widgets</span></a>

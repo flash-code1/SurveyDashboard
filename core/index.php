@@ -11,7 +11,7 @@ include("header.php");
               <div class="row">
                 <div class="col-6">
                   <h3>
-                     NSMT</h3>
+                     Survey</h3>
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
                     <li class="breadcrumb-item">Dashboard</li>
@@ -69,7 +69,7 @@ include("header.php");
                       <div class="profile-vector"><img class="img-fluid" src="../assets/images/dashboard/welcome.png" alt=""></div>
                       <h4 class="f-w-600"><span id="greeting">Good Morning</span> <span><?php $fullname = "name_of_user"; echo $fullname; ?></span> <span class="right-circle"><i class="fa fa-check-circle f-14 middle"></i></span></h4>
                       <p><span> Check the time.</span></p>
-                      <div class="whatsnew-btn"><a class="btn btn-primary">View Transactions</a></div>
+                      <div class="whatsnew-btn"><a class="btn btn-primary">Data Virtualization</a></div>
                       <div class="left-icon"><i class="fa fa-bell"> </i></div>
                     </div>
                   </div>
@@ -83,19 +83,19 @@ include("header.php");
                         <div class="row m-0 chart-left">
                           <div class="col-xl-12 p-0 left_side_earning">
                             <h5>Dashboard</h5>
-                            <p class="font-roboto">Overview of last month</p>
+                            <p class="font-roboto">Loan Profile</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>$4055.56 </h5>
-                            <p class="font-roboto">This Month Earning</p>
+                            <h5>NGN 200,000.56 </h5>
+                            <p class="font-roboto">Male</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>$1004.11</h5>
-                            <p class="font-roboto">This Month Profit</p>
+                            <h5>NGN 300,000.11</h5>
+                            <p class="font-roboto">Female</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>90%</h5>
-                            <p class="font-roboto">This Month Sale</p>
+                            <h5>NGN 500,001.00</h5>
+                            <p class="font-roboto">Total Loan Amount</p>
                           </div>
                           <div class="col-xl-12 p-0 left-btn"><a class="btn btn-gradient">Summary</a></div>
                         </div>
@@ -106,18 +106,15 @@ include("header.php");
                             <div class="col-xl-8 col-md-8 col-sm-8 col-12 p-0">
                               <div class="inner-top-left">
                                 <ul class="d-flex list-unstyled">
-                                  <li>Daily</li>
-                                  <li class="active">Weekly</li>
-                                  <li>Monthly</li>
-                                  <li>Yearly</li>
+                                  <li class="active">Yearly</li>
                                 </ul>
                               </div>
                             </div>
                             <div class="col-xl-4 col-md-4 col-sm-4 col-12 p-0 justify-content-end">
                               <div class="inner-top-right">
                                 <ul class="d-flex list-unstyled justify-content-end">
-                                  <li>Online</li>
-                                  <li>Store</li>
+                                  <li>Male</li>
+                                  <li>Female</li>
                                 </ul>
                               </div>
                             </div>
@@ -135,28 +132,28 @@ include("header.php");
                         <div class="row border-top m-0">
                           <div class="col-xl-4 pl-0 col-md-6 col-sm-6">
                             <div class="media p-0">
-                              <div class="media-left"><i class="icofont icofont-crown"></i></div>
+                              <div class="media-left"><i class="icofont icofont-user"></i></div>
                               <div class="media-body">
-                                <h6>Referral Earning</h6>
-                                <p>$5,000.20</p>
+                                <h6>Total Male</h6>
+                                <p>2,000</p>
                               </div>
                             </div>
                           </div>
                           <div class="col-xl-4 col-md-6 col-sm-6">
                             <div class="media p-0">
-                              <div class="media-left bg-secondary"><i class="icofont icofont-heart-alt"></i></div>
+                              <div class="media-left bg-secondary"><i class="icofont icofont-user"></i></div>
                               <div class="media-body">
-                                <h6>Cash Balance</h6>
-                                <p>$2,657.21</p>
+                                <h6>Total Female</h6>
+                                <p>3,000</p>
                               </div>
                             </div>
                           </div>
                           <div class="col-xl-4 col-md-12 pr-0">
                             <div class="media p-0">
-                              <div class="media-left"><i class="icofont icofont-cur-dollar"></i></div>
+                              <div class="media-left"><i class="icofont icofont-users"></i></div>
                               <div class="media-body">
-                                <h6>Sales forcasting</h6>
-                                <p>$9,478.50     </p>
+                                <h6>Total</h6>
+                                <p>5,000 </p>
                               </div>
                             </div>
                           </div>
@@ -166,6 +163,62 @@ include("header.php");
                   </div>
                 </div>
               </div>
+              <!-- Chart widget top Start-->
+            <!-- <div class="row"> -->
+              <div class="col-xl-9 xl-100 chart_data_left box-col-12">
+                <div class="card o-hidden">
+                  <div class="chart-widget-top">
+                    <div class="row card-body">
+                      <div class="col-5">
+                        <h6 class="f-w-600 font-primary">Cotton Grown </h6><span class="num"><span class="counter">90</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                      </div>
+                      <div class="col-7 text-right">
+                        <h4 class="num total-value">3,654 -<span class="counter">Planted Cotton</span></h4>
+                      </div>
+                    </div>
+                    <div>
+                      <div id="chart-widget1"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 xl-100 chart_data_left box-col-12">
+                <div class="card o-hidden">
+                  <div class="chart-widget-top">
+                    <div class="row card-body">
+                      <div class="col-7">
+                        <h6 class="f-w-600 font-secondary">Maize Grown</h6><span class="num"><span class="counter">4.5</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                      </div>
+                      <div class="col-5 text-right">
+                      <h4 class="num total-value">30-<span class="counter">Planted Maize</span></h4>
+                      </div>
+                    </div>
+                    <div id="chart-widget2">
+                      <div class="flot-chart-placeholder" id="chart-widget-top-second"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 xl-100 chart_data_left box-col-12">
+                <div class="card o-hidden">
+                  <div class="chart-widget-top">
+                    <div class="row card-body">
+                      <div class="col-8">
+                        <h6 class="f-w-600 font-success">Rice Grown</h6><span class="num"><span class="counter">5.5</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
+                      </div>
+                      <div class="col-4 text-right">
+                      <h4 class="num total-value">45-<span class="counter">Planted Rice</span></h4>
+                      </div>
+                    </div>
+                    <div id="chart-widget3">
+                      <div class="flot-chart-placeholder" id="chart-widget-top-third"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            <!-- </div> -->
+            <!-- Chart widget top Ends-->
               <div class="col-xl-9 xl-100 chart_data_left box-col-12">
                 <div class="card">
                   <div class="card-body p-0">
@@ -179,7 +232,7 @@ include("header.php");
                           </div>
                           <div class="media-body">
                             <div class="right-chart-content">
-                              <h4>1001</h4><span>purchase </span>
+                              <h4></h4><span>Age</span>
                             </div>
                           </div>
                         </div>
@@ -193,7 +246,7 @@ include("header.php");
                           </div>
                           <div class="media-body">
                             <div class="right-chart-content">
-                              <h4>1005</h4><span>Sales</span>
+                              <h4></h4><span>Marital Status</span>
                             </div>
                           </div>
                         </div>
@@ -207,7 +260,7 @@ include("header.php");
                           </div>
                           <div class="media-body">
                             <div class="right-chart-content">
-                              <h4>100</h4><span>Sales return</span>
+                              <h4></h4><span>Education</span>
                             </div>
                           </div>
                         </div>
@@ -221,7 +274,7 @@ include("header.php");
                           </div>
                           <div class="media-body">
                             <div class="right-chart-content">
-                              <h4>101</h4><span>Purchase ret</span>
+                              <h4></h4><span>Household Income</span>
                             </div>
                           </div>
                         </div>
@@ -230,166 +283,44 @@ include("header.php");
                   </div>
                 </div>
               </div>
-              <div class="col-xl-3 xl-50 chart_data_right box-col-12">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="media align-items-center">
-                      <div class="media-body right-chart-content">
-                        <h4>$95,900<span class="new-box">Hot</span></h4><span>Purchase Order Value</span>
-                      </div>
-                      <div class="knob-block text-center">
-                        <input class="knob1" data-width="10" data-height="70" data-thickness=".3" data-angleoffset="0" data-linecap="round" data-fgcolor="#7366ff" data-bgcolor="#eef5fb" value="60">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 xl-50 chart_data_right second d-none"> 
-                <div class="card">
-                  <div class="card-body">
-                    <div class="media align-items-center">
-                      <div class="media-body right-chart-content"> 
-                        <h4>$95,000<span class="new-box">New</span></h4><span>Product Order Value</span>
-                      </div>
-                      <div class="knob-block text-center">
-                        <input class="knob1" data-width="50" data-height="70" data-thickness=".3" data-fgcolor="#7366ff" data-linecap="round" data-angleoffset="0" value="60">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 xl-50 news box-col-6">
+              <!-- ok -->
+              <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card">
                   <div class="card-header">
-                    <div class="header-top">
-                      <h5 class="m-0">News & Update</h5>
-                      <div class="card-header-right-icon">
-                        <select class="button btn btn-primary">
-                          <option>Today</option>
-                          <option>Tomorrow</option>
-                          <option>Yesterday</option>
-                        </select>
-                      </div>
-                    </div>
+                    <h5>Loan profile</h5>
                   </div>
-                  <div class="card-body p-0">
-                    <div class="news-update">
-                      <h6>36% off For pixel lights Couslations Types.</h6><span>Lorem Ipsum is simply dummy...</span>
-                    </div>
-                    <div class="news-update">
-                      <h6>We are produce new product this</h6><span> Lorem Ipsum is simply text of the printing... </span>
-                    </div>
-                    <div class="news-update">
-                      <h6>50% off For COVID Couslations Types.</h6><span>Lorem Ipsum is simply dummy...</span>
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <div class="bottom-btn"><a href="#">More...</a></div>
+                  <div class="card-body">
+                    <div id="basic-bar"></div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4 xl-50 appointment-sec box-col-6">
-                <div class="row"> 
-                  <div class="col-xl-12 appointment">
-                    <div class="card">
-                      <div class="card-header card-no-border">
-                        <div class="header-top">
-                          <h5 class="m-0">appointment</h5>
-                          <div class="card-header-right-icon">
-                            <select class="button btn btn-primary">
-                              <option>Today</option>
-                              <option>Tomorrow</option>
-                              <option>Yesterday</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body pt-0">
-                        <div class="appointment-table table-responsive">
-                          <table class="table table-bordernone">
-                            <tbody>
-                              <tr>
-                                <td><img class="img-fluid img-40 rounded-circle mb-3" src="../assets/images/appointment/app-ent.jpg" alt="Image description">
-                                  <div class="status-circle bg-primary"></div>
-                                </td>
-                                <td class="img-content-box"><span class="d-block">Venter Loren</span><span class="font-roboto">Now</span></td>
-                                <td>
-                                  <p class="m-0 font-primary">28 Sept</p>
-                                </td>
-                                <td class="text-right">
-                                  <div class="button btn btn-primary">Done<i class="fa fa-check-circle ml-2"></i></div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td><img class="img-fluid img-40 rounded-circle" src="../assets/images/appointment/app-ent.jpg" alt="Image description">
-                                  <div class="status-circle bg-primary"></div>
-                                </td>
-                                <td class="img-content-box"><span class="d-block">John Loren</span><span class="font-roboto">11:00</span></td>
-                                <td>
-                                  <p class="m-0 font-primary">22 Sept</p>
-                                </td>
-                                <td class="text-right">
-                                  <div class="button btn btn-danger">Pending<i class="fa fa-check-circle ml-2"></i></div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-12 alert-sec">
-                    <div class="card bg-img">
-                      <div class="card-header">
-                        <div class="header-top">
-                          <h5 class="m-0">Alert  </h5>
-                          <div class="dot-right-icon"><i class="fa fa-ellipsis-h"></i></div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <div class="body-bottom">
-                          <h6>  10% off For drama lights Couslations...</h6><span class="font-roboto">Lorem Ipsum is simply dummy...It is a long established fact that a reader will be distracted by  </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-4 xl-50 notification box-col-6">
+              <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card">
-                  <div class="card-header card-no-border">
-                    <div class="header-top">
-                      <h5 class="m-0">notification</h5>
-                      <div class="card-header-right-icon">
-                        <select class="button btn btn-primary">
-                          <option>Today</option>
-                          <option>Tomorrow</option>
-                          <option>Yesterday</option>
-                        </select>
-                      </div>
-                    </div>
+                  <div class="card-header">
+                    <h5>Planting data</h5>
                   </div>
-                  <div class="card-body pt-0">
-                    <div class="media">
-                      <div class="media-body">
-                        <p>20-04-2020 <span>10:10</span></p>
-                        <h6>Updated Product<span class="dot-notification"></span></h6><span>Quisque a consequat ante sit amet magna...</span>
-                      </div>
-                    </div>
-                    <div class="media">
-                      <div class="media-body">
-                        <p>20-04-2020<span class="pl-1">Today</span><span class="badge badge-secondary">New</span></p>
-                        <h6>Tello just like your product<span class="dot-notification"></span></h6><span>Quisque a consequat ante sit amet magna... </span>
-                      </div>
-                    </div>
-                    <div class="media">
-                      <div class="media-body">
-                        <div class="d-flex mb-3">
-                          <div class="inner-img"><img class="img-fluid" src="../assets/images/notification/1.jpg" alt="Product-1"></div>
-                          <div class="inner-img"><img class="img-fluid" src="../assets/images/notification/2.jpg" alt="Product-2"></div>
-                        </div><span class="mt-3">Quisque a consequat ante sit amet magna...</span>
-                      </div>
-                    </div>
+                  <div class="card-body">
+                    <div id="column-chart"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Havest Month </h5>
+                  </div>
+                  <div class="card-body apex-chart">
+                    <div id="piechart"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Warehouse data</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="radarchart"></div>
                   </div>
                 </div>
               </div>

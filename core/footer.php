@@ -3,10 +3,10 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 footer-copyright">
-                <p class="mb-0">Copyright 2020 © Nspire All rights reserved.</p>
+                <p class="mb-0">Copyright 2020 © Survey All rights reserved.</p>
               </div>
               <div class="col-md-6">
-                <p class="pull-right mb-0">Developed by  <i class="fa fa-heart font-secondary"></i> Oluwaseun</p>
+                <p class="pull-right mb-0">Developed by  <i class="fa fa-heart font-secondary"></i> Orange Business</p>
               </div>
             </div>
           </div>
@@ -42,6 +42,11 @@
     <script src="../assets/js/typeahead/typeahead.custom.js"></script>
     <script src="../assets/js/typeahead-search/handlebars.js"></script>
     <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+    <!-- chart JS -->
+    <script src="../assets/js/chart-widget.js"></script>
+    <!-- <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="../assets/js/chart/apex-chart/stock-prices.js"></script> -->
+    <script src="../assets/js/chart/apex-chart/chart-custom.js"></script>
     <script src="../assets/js/tooltip-init.js"></script>
     <!-- datatable -->
     <script src="../assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
