@@ -6,7 +6,7 @@
                 <p class="mb-0">Copyright 2020 © Survey All rights reserved.</p>
               </div>
               <div class="col-md-6">
-                <p class="pull-right mb-0">Developed by  <i class="fa fa-heart font-secondary"></i> Orange Business</p>
+                <p class="pull-right mb-0">Developed by  <i class="fa fa-heart font-secondary"></i> Needle Technology</p>
               </div>
             </div>
           </div>

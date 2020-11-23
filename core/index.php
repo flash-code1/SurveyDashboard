@@ -56,25 +56,7 @@ include("header.php");
           <!-- Container-fluid starts-->
           <div class="container-fluid">
             <div class="row second-chart-list third-news-update">
-              <div class="col-xl-4 col-lg-12 xl-50 morning-sec box-col-12">
-                <div class="card o-hidden profile-greeting">
-                  <div class="card-body">
-                    <div class="media">
-                      <div class="badge-groups w-100">
-                        <div class="badge f-12"><i class="mr-1" data-feather="clock"></i><span id="txt"></span></div>
-                        <div class="badge f-12"><i class="fa fa-spin fa-cog f-14"></i></div>
-                      </div>
-                    </div>
-                    <div class="greeting-user text-center">
-                      <div class="profile-vector"><img class="img-fluid" src="../assets/images/dashboard/welcome.png" alt=""></div>
-                      <h4 class="f-w-600"><span id="greeting">Good Morning</span> <span><?php $fullname = "name_of_user"; echo $fullname; ?></span> <span class="right-circle"><i class="fa fa-check-circle f-14 middle"></i></span></h4>
-                      <p><span> Check the time.</span></p>
-                      <div class="whatsnew-btn"><a class="btn btn-primary">Data Virtualization</a></div>
-                      <div class="left-icon"><i class="fa fa-bell"> </i></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
               <div class="col-xl-8 xl-100 dashboard-sec box-col-12">
                 <div class="card earning-card">
                   <div class="card-body p-0">
@@ -85,16 +67,31 @@ include("header.php");
                             <h5>Dashboard</h5>
                             <p class="font-roboto">Loan Profile</p>
                           </div>
+                          <?php
+                          // this code section is for sumary of cash to the dashboard\
+                          $query_male_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE GENDER = 'Male'");
+                          $qma = mysqli_fetch_array($query_male_amt);
+                          $male_amt = number_format($qma["amount"], 2);
+                          // code section for the female
+                          // this code section is for sumary of cash to the dashboard\
+                          $query_female_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE GENDER = 'Female'");
+                          $qfa = mysqli_fetch_array($query_female_amt);
+                          $female_amt = number_format($qfa["amount"], 2);
+                          // total code
+                          $query_tot_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data`");
+                          $qta = mysqli_fetch_array($query_tot_amt);
+                          $total_amt = number_format($qta["amount"], 2);
+                          ?>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN 200,000.56 </h5>
+                            <h5>NGN <?php echo $male_amt; ?> </h5>
                             <p class="font-roboto">Male</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN 300,000.11</h5>
+                            <h5>NGN <?php echo $female_amt; ?></h5>
                             <p class="font-roboto">Female</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN 500,001.00</h5>
+                            <h5>NGN <?php echo $total_amt; ?></h5>
                             <p class="font-roboto">Total Loan Amount</p>
                           </div>
                           <div class="col-xl-12 p-0 left-btn"><a class="btn btn-gradient">Summary</a></div>
@@ -106,7 +103,7 @@ include("header.php");
                             <div class="col-xl-8 col-md-8 col-sm-8 col-12 p-0">
                               <div class="inner-top-left">
                                 <ul class="d-flex list-unstyled">
-                                  <li class="active">Yearly</li>
+                                  <!-- <li class="active">Yearly</li> -->
                                 </ul>
                               </div>
                             </div>
@@ -135,7 +132,35 @@ include("header.php");
                               <div class="media-left"><i class="icofont icofont-user"></i></div>
                               <div class="media-body">
                                 <h6>Total Male</h6>
-                                <p>2,000</p>
+                                <?php
+                            $query_male_loan = mysqli_query($con, "SELECT 
+                            COUNT(*) AS total_male
+                        FROM
+                        `survey_data`
+                        WHERE
+                        GENDER = 'Male'");
+                        $tm = mysqli_fetch_array($query_male_loan);
+                        $total_male = number_format($tm["total_male"]);
+
+                        // code for females
+                        $query_female_loan = mysqli_query($con, "SELECT 
+                        COUNT(*) AS total_female
+                    FROM
+                    `survey_data`
+                    WHERE
+                    GENDER = 'Female'");
+                    $tf = mysqli_fetch_array($query_female_loan);
+                    $total_female = number_format($tf["total_female"]);
+
+                    // code for total male and female
+                    $query_user_loan = mysqli_query($con, "SELECT 
+                        COUNT(*) AS total_users
+                    FROM
+                    `survey_data`");
+                    $tu = mysqli_fetch_array($query_user_loan);
+                    $total_user = number_format($tu["total_users"]);
+                            ?>
+                                <p><?php echo $total_male; ?></p>
                               </div>
                             </div>
                           </div>
@@ -144,7 +169,7 @@ include("header.php");
                               <div class="media-left bg-secondary"><i class="icofont icofont-user"></i></div>
                               <div class="media-body">
                                 <h6>Total Female</h6>
-                                <p>3,000</p>
+                                <p><?php echo $total_female; ?></p>
                               </div>
                             </div>
                           </div>
@@ -153,7 +178,7 @@ include("header.php");
                               <div class="media-left"><i class="icofont icofont-users"></i></div>
                               <div class="media-body">
                                 <h6>Total</h6>
-                                <p>5,000 </p>
+                                <p><?php echo $total_user; ?> </p>
                               </div>
                             </div>
                           </div>
@@ -165,6 +190,30 @@ include("header.php");
               </div>
               <!-- Chart widget top Start-->
             <!-- <div class="row"> -->
+              <?php
+              $query_user_maize = mysqli_query($con, "SELECT 
+              COUNT(*) AS total_maize
+          FROM
+          `survey_data` WHERE CropGrown = 'Maize'");
+          $tm = mysqli_fetch_array($query_user_maize);
+          $total_maize = number_format($tm["total_maize"]);
+
+          // cotton
+          $query_cotton = mysqli_query($con, "SELECT 
+              COUNT(*) AS total_cotton
+          FROM
+          `survey_data` WHERE CropGrown = 'Cotton'");
+          $tcx = mysqli_fetch_array($query_cotton);
+          $total_cotton = number_format($tcx["total_cotton"]);
+
+          // rice
+          $query_rice = mysqli_query($con, "SELECT 
+              COUNT(*) AS total_rice
+          FROM
+          `survey_data` WHERE CropGrown = 'Rice'");
+          $tcr = mysqli_fetch_array($query_rice);
+          $total_rice = number_format($tcr["total_rice"]);
+              ?>
               <div class="col-xl-9 xl-100 chart_data_left box-col-12">
                 <div class="card o-hidden">
                   <div class="chart-widget-top">
@@ -173,7 +222,7 @@ include("header.php");
                         <h6 class="f-w-600 font-primary">Cotton Grown </h6><span class="num"><span class="counter">90</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
                       </div>
                       <div class="col-7 text-right">
-                        <h4 class="num total-value">3,654 -<span class="counter">Planted Cotton</span></h4>
+                        <h4 class="num total-value"><?php echo $total_cotton; ?> -<span class="counter">Planted Cotton</span></h4>
                       </div>
                     </div>
                     <div>
@@ -190,7 +239,7 @@ include("header.php");
                         <h6 class="f-w-600 font-secondary">Maize Grown</h6><span class="num"><span class="counter">4.5</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
                       </div>
                       <div class="col-5 text-right">
-                      <h4 class="num total-value">30-<span class="counter">Planted Maize</span></h4>
+                      <h4 class="num total-value"><?php echo $total_maize; ?> -<span class="counter">Planted Maize</span></h4>
                       </div>
                     </div>
                     <div id="chart-widget2">
@@ -207,7 +256,7 @@ include("header.php");
                         <h6 class="f-w-600 font-success">Rice Grown</h6><span class="num"><span class="counter">5.5</span>%<i class="icon-angle-up f-12 ml-1"></i></span>
                       </div>
                       <div class="col-4 text-right">
-                      <h4 class="num total-value">45-<span class="counter">Planted Rice</span></h4>
+                      <h4 class="num total-value"><?php echo $total_rice; ?>-<span class="counter">Planted Rice</span></h4>
                       </div>
                     </div>
                     <div id="chart-widget3">
@@ -324,7 +373,26 @@ include("header.php");
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4 col-lg-12 xl-50 calendar-sec box-col-6">
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card o-hidden profile-greeting">
+                  <div class="card-body">
+                    <div class="media">
+                      <div class="badge-groups w-100">
+                        <div class="badge f-12"><i class="mr-1" data-feather="clock"></i><span id="txt"></span></div>
+                        <div class="badge f-12"><i class="fa fa-spin fa-cog f-14"></i></div>
+                      </div>
+                    </div>
+                    <div class="greeting-user text-center">
+                      <div class="profile-vector"><img class="img-fluid" src="../assets/images/dashboard/welcome.png" alt=""></div>
+                      <h4 class="f-w-600"><span id="greeting">Good Morning</span> <span></span> <span class="right-circle"><i class="fa fa-check-circle f-14 middle"></i></span></h4>
+                      <p><span> Check the time.</span></p>
+                      <div class="whatsnew-btn"><a class="btn btn-primary">Data Virtualization</a></div>
+                      <div class="left-icon"><i class="fa fa-bell"> </i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-xl-4 col-lg-12 xl-50 calendar-sec box-col-6">
                 <div class="card gradient-primary o-hidden">
                   <div class="card-body">
                     <div class="setting-dot">
@@ -335,7 +403,7 @@ include("header.php");
                     </div><span class="default-dots-stay overview-dots full-width-dots"><span class="dots-group"><span class="dots dots1"></span><span class="dots dots2 dot-small"></span><span class="dots dots3 dot-small"></span><span class="dots dots4 dot-medium"></span><span class="dots dots5 dot-small"></span><span class="dots dots6 dot-small"></span><span class="dots dots7 dot-small-semi"></span><span class="dots dots8 dot-small-semi"></span><span class="dots dots9 dot-small">                </span></span></span>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <!-- Container-fluid Ends-->

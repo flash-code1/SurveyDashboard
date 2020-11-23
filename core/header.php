@@ -1,3 +1,6 @@
+<?php
+  include('datatable/config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -193,11 +196,11 @@
         <!-- Page Sidebar Start-->
         <header class="main-nav">
             <center>
-          <div class="logo-wrapper"><a href="index.php"><img class="img-fluid for-light" src="../assets/images/logo/" height="100" width="100" alt=""><img class="img-fluid for-dark" src="../assets/images/logo/" height="100" width="100" alt=""></a>
+          <div class="logo-wrapper"><a href="index.php"><img class="img-fluid for-light" src="Needle-logo2.png" height="100" width="100" alt=""><img class="img-fluid for-dark" src="Needle-logo2.png" height="100" width="100" alt=""></a>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
             <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="grid" id="sidebar-toggle"> </i></div>
           </div>
-          <div class="logo-icon-wrapper"><a href="index.php"><img class="img-fluid" src="../assets/images/logo/" alt=""></a></div>
+          <div class="logo-icon-wrapper"><a href="index.php"><img class="img-fluid" src="Needle-logo2.png" alt=""></a></div>
           </center>
           <nav>
             <div class="main-navbar">
