@@ -1,8 +1,8 @@
 <?php
 
 $host = "localhost"; /* Host name */
-$user = "sekanisy"; /* User */
-$password = "4r6WY#JP+rnl67"; /* Password */
+$user = "anchorbn_anchorbn"; /* User */
+$password = "29x.5KLdRC#kv4"; /* Password */
 $dbname = "anchorbn_anchorborrowers"; /* Database name */
 
 $con = mysqli_connect($host, $user, $password,$dbname);
