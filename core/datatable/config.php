@@ -2,8 +2,8 @@
 
 $host = "localhost"; /* Host name */
 $user = "anchorbn_anchorbn"; /* User */
-$password = "29x.5KLdRC#kv4"; /* Password */
-$dbname = "anchorbn_anchorborrowers"; /* Database name */
+$password = "}@Ym-ac=CS2="; /* Password */
+$dbname = "anchorbn_Anchorborrowers"; /* Database name */
 
 $con = mysqli_connect($host, $user, $password,$dbname);
 // Check connection
