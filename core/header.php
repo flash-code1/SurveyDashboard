@@ -35,6 +35,7 @@
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- MAP -->
    
     <!-- GOOGLE -->
@@ -221,7 +222,7 @@
                   <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather=""></i><span class="">View Survey</span>
                       <label class="badge badge-success">2</label></a>
                     <ul class="nav-submenu menu-content">
-                      <li><a class="" href="#">Data Virtualization</a></li>
+                      <li><a class="" href="data_visualization.php">Data Visualization</a></li>
                     </ul>
                   </li>
                   <!-- <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather="airplay"></i><span class="lan-6">Widgets</span></a>
