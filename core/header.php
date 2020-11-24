@@ -40,7 +40,19 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- MAP -->
-   
+    <?php
+         session_start();
+         include("datatable/config.php");
+         // display
+         $user_id = $_SESSION["id"];
+         $email = $_SESSION["email"];
+         $fullname = $_SESSION["fullname"];
+         $usertype = $_SESSION["usertype"];
+         // we are done!
+         if ($usertype == "") {
+             echo header("location:  ../function/logout.php");
+         }
+        ?>
     <!-- GOOGLE -->
   </head>
   <body onload="startTime()">
@@ -165,8 +177,8 @@
               <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
               <li class="profile-nav onhover-dropdown p-0">
                 <div class="media profile-media"><img class="b-r-10" src="../assets/images/dashboard/profile.jpg" alt="">
-                  <div class="media-body"><span>name_of_user</span>
-                    <p class="mb-0 font-roboto">Director <i class="middle fa fa-angle-down"></i></p>
+                  <div class="media-body"><span><?php echo $fullname; ?></span>
+                    <p class="mb-0 font-roboto"><?php echo $usertype; ?> <i class="middle fa fa-angle-down"></i></p>
                   </div>
                 </div>
                 <ul class="profile-dropdown onhover-show-div">
@@ -174,7 +186,7 @@
                   <li><i data-feather="mail"></i><span>Notification</span></li>
                   <!-- <li><i data-feather="file-text"></i><span>Taskboard</span></li> -->
                   <!-- <li><i data-feather="settings"></i><span>Settings</span></li> -->
-                  <li><i data-feather="log-in"> </i><span>Log out</span></li>
+                  <li><i data-feather="log-in"> </i><span> <a href="../function/logout.php">Log out</a</span></li>
                 </ul>
               </li>
             </ul>
@@ -240,3 +252,5 @@
             </div>
           </nav>
         </header>
+
+       
