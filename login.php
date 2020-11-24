@@ -412,11 +412,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 					<div class="text-center p-t-12">
 						<span class="txt1">
-							Needle Tech.
+							Needle Technology
 						</span>
-						<a class="txt2" href="signup.php">
+						<!-- <a class="txt2" href="signup.php">
 							Signup?
-						</a>
+						</a> -->
 					</div>
 
 					<div class="text-center p-t-136">
