@@ -238,7 +238,7 @@
                       <label class="badge badge-success">2</label></a>
                     <ul class="nav-submenu menu-content">
                       <li><a class="" href="data_visualization.php">View Farmers Data</a></li>
-                      <li><a class="" href="#">View Warehouse</a></li>
+                      <li><a class="" href="data_visualization_house.php">View Warehouse</a></li>
                     </ul>
                   </li>
                   <!-- <li class="dropdown"><a class="nav-link menu-title" href="#"><i data-feather="airplay"></i><span class="lan-6">Widgets</span></a>

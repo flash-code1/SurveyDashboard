@@ -1,5 +1,5 @@
 <?php
-$web_title = "Farmers Data Visualization";
+$web_title = "Warehouse Data Visualization";
 include("header.php");
 ?>
 <link href='datatable/DataTables/datatables.min.css' rel='stylesheet' type='text/css'>
@@ -10,7 +10,7 @@ include("header.php");
             <div class="page-header">
               <div class="row">
                 <div class="col-6">
-                  <h3>Data Visualization</h3>
+                  <h3>Warehouse Data Visualization</h3>
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
                     <li class="breadcrumb-item">View Survey Data</li>
@@ -59,25 +59,27 @@ include("header.php");
               <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header">
-                    <h5>View Survey Details</h5><span>This page help you view all the information collected.</span>
+                    <h5>View Warehouse Details</h5><span>This page help you view all the information collected.</span>
                     <!-- button to create -->
                     
                     <!-- end button -->
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
-                      <table id="empTable" class="display nowrap dataTable">
+                      <table id="empTabled" class="display nowrap dataTable">
                         <thead>
                           <tr>
                             <th>SubmissionDate</th>
-                            <th>StateInterview</th>
-                            <th>clusterCommunity</th>
-                            <th>Data Management Asst.</th>
-                            <th>Phone</th>
-                            <th>Gender</th>
-                            <th>Age range</th>
-                            <th>Funding</th>
-                            <th>Loan Amount</th>
+                            <th>StateHeadquarter</th>
+                            <th>EnumeratorName</th>
+                            <th>Ward</th>
+                            <th>Crops</th>
+                            <th>FarmersDeliveredMaize</th>
+                            <th>MetricTonMaize</th>
+                            <th>TotalValueMaize</th>
+                            <th>FarmerDeliveredRice</th>
+                            <th>MetricTonRice</th>
+                            <th>TotalValueRice</th>
                             <th>Action</th>
                           </tr>
                         </thead>
@@ -95,23 +97,25 @@ include("header.php");
                     </div>
                     <script>
         $(document).ready(function(){
-            $('#empTable').DataTable({
+            $('#empTabled').DataTable({
                 'processing': true,
                 'serverSide': true,
                 'serverMethod': 'post',
                 'ajax': {
-                    'url':'datatable/ajaxfile.php'
+                    'url':'datatable/warehouse.php'
                 },
                 'columns': [
                     { data: 'SubmissionDate' },
-                    { data: 'StateInterview' },
-                    { data: 'clusterCommunity' },
-                    { data: 'NameOfDataManagementAssistant' },
-                    { data: 'PhoneOfBeneficiary' },
-                    { data: 'GENDER' },
-                    { data: 'AGERANGE' },
-                    { data: 'Funding' },
-                    { data: 'NairaValue' },
+                    { data: 'StateHeadquarter' },
+                    { data: 'EnumeratorName' },
+                    { data: 'Ward' },
+                    { data: 'Crops' },
+                    { data: 'FarmersDeliveredMaiza' },
+                    { data: 'MetricTonMaize' },
+                    { data: 'TotalValueMaize' },
+                    { data: 'FarmerDeliveredRice' },
+                    { data: 'MerticTonRice' },
+                    { data: 'TotalValueRice' },
                     { data: 'close' },
                 ]
             });
