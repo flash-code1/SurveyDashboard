@@ -29,7 +29,7 @@
     <script src="../assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
     <script src="../assets/js/chart/knob/knob.min.js"></script>
     <script src="../assets/js/chart/knob/knob-chart.js"></script>
-    <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
+    <!-- <script src="../assets/js/chart/apex-chart/apex-chart.js"></script> -->
     <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>
     <script src="../assets/js/notify/bootstrap-notify.min.js"></script>
     <script src="../assets/js/dashboard/default.js"></script>
@@ -44,8 +44,8 @@
     <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
     <!-- chart JS -->
     <script src="../assets/js/chart-widget.js"></script>
-    <!-- <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
-    <script src="../assets/js/chart/apex-chart/stock-prices.js"></script> -->
+     <script src="../assets/js/chart/apex-chart/apex-chart.js"></script> 
+    <!-- <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>  -->
     <script src="../assets/js/chart/apex-chart/chart-custom.js"></script>
     <script src="../assets/js/tooltip-init.js"></script>
     <!-- datatable -->
@@ -58,6 +58,8 @@
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/theme-customizer/customizer.js"></script>
     <!-- login js-->
+    <script src="assets/libs/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/libs/sweetalert2/dist/sweetalert2.min.js"></script>
     <!-- Plugin used-->
   </body>
 </html>

@@ -36,6 +36,7 @@ $empRecords = mysqli_query($con, $empQuery);
 $data = array();
 
 while ($row = mysqli_fetch_assoc($empRecords)) {
+	$id = $row["id"];
     $data[] = array(
     		"SubmissionDate"=>$row['SubmissionDate'],
     		"StateInterview"=>$row['StateInterview'],
@@ -46,7 +47,7 @@ while ($row = mysqli_fetch_assoc($empRecords)) {
     		"AGERANGE"=>$row['AGERANGE'],
     		"Funding"=>$row['Funding'],
     		"NairaValue"=>$row['NairaValue'],
-    		"close"=>"<a href='#' class='btn btn-pill btn-success btn-air-success btn-success-gradien' type='button'>View More</a>"
+    		"close"=>"<a href='data_single.php?id=$id' class='btn btn-pill btn-success btn-air-success btn-success-gradien' type='button'>View More</a>"
     	);
 }
 

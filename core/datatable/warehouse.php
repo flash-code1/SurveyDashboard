@@ -34,6 +34,7 @@ $empRecords = mysqli_query($con, $empQuery);
 $data = array();
 
 while ($row = mysqli_fetch_assoc($empRecords)) {
+	$id = $row["id"];
     $data[] = array(
     		"SubmissionDate"=>$row['SubmissionDate'],
     		"StateHeadquarter"=>$row['StateHeadquarter'],
@@ -46,7 +47,7 @@ while ($row = mysqli_fetch_assoc($empRecords)) {
     		"FarmerDeliveredRice"=>$row['FarmerDeliveredRice'],
     		"MerticTonRice"=>$row['MerticTonRice'],
     		"TotalValueRice"=>$row['TotalValueRice'],
-    		"close"=>"<a href='#' class='btn btn-pill btn-success btn-air-success btn-success-gradien' type='button'>View More</a>"
+    		"close"=>"<a href='data_single_house.php?id=$id' class='btn btn-pill btn-success btn-air-success btn-success-gradien' type='button'>View More</a>"
     	);
 }
 
