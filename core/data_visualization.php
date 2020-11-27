@@ -69,9 +69,9 @@ include("header.php");
                       <table id="empTable" class="display nowrap dataTable">
                         <thead>
                           <tr>
-                            <th>SubmissionDate</th>
-                            <th>StateInterview</th>
-                            <th>clusterCommunity</th>
+                            <th>Date</th>
+                            <th>State</th>
+                            <th>Community</th>
                             <th>Data Management Asst.</th>
                             <th>Phone</th>
                             <th>Gender</th>
