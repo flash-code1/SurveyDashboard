@@ -69,8 +69,8 @@ include("header.php");
                       <table id="empTabled" class="display nowrap dataTable">
                         <thead>
                           <tr>
-                            <th>SubmissionDate</th>
-                            <th>StateHeadquarter</th>
+                            <th>Date</th>
+                            <th>State Headquarter</th>
                             <th>EnumeratorName</th>
                             <th>Ward</th>
                             <th>Crops</th>

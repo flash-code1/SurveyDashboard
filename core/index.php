@@ -240,17 +240,17 @@ include("header.php");
                           </div>
                           <?php
                           // this code section is for sumary of cash to the dashboard\
-                          $query_male_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE CropGrown = 'Cotton'");
+                          $query_male_amt = mysqli_query($con, "SELECT SUM(valueCotton) AS amount FROM `warehouse`");
                           $qma = mysqli_fetch_array($query_male_amt);
                           $Cotton_amt = number_format($qma["amount"], 2);
                           // code section for the female
                           // this code section is for sumary of cash to the dashboard\
-                          $query_female_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE CropGrown = 'Rice'");
+                          $query_female_amt = mysqli_query($con, "SELECT SUM(TotalValueMaize) AS amount FROM `warehouse`");
                           $qfa = mysqli_fetch_array($query_female_amt);
                           $Rice_amt = number_format($qfa["amount"], 2);
 
                           // Making Maize
-                          $query_maize_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE CropGrown = 'Maize'");
+                          $query_maize_amt = mysqli_query($con, "SELECT SUM(TotalValueRice) AS amount FROM `warehouse`");
                           $qta = mysqli_fetch_array($query_maize_amt);
                           $Maize_amt = number_format($qta["amount"], 2);
                           // total code
