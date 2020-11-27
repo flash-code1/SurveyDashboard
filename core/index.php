@@ -57,6 +57,93 @@ include("header.php");
           <!-- Container-fluid starts-->
           <div class="container-fluid">
             <div class="row second-chart-list third-news-update">
+               <!-- Chart widget top Ends-->
+               <div class="col-xl-9 xl-100 chart_data_left box-col-12">
+                <div class="card">
+                  <div class="card-body p-0">
+                    <div class="row m-0 chart-main">
+                    <div class="col-xl-6 col-md-6 col-sm-6 p-0 box-col-6">
+                        <div class="media align-items-center">
+                          <div class="hospital-small-chart">
+                            <div class="small-bar">
+                            <div class="card">
+                  <div class="card-header">
+                    <?php 
+                    $farmers = mysqli_query($con, "SELECT 
+                    COUNT(*) AS all_farm
+                    FROM
+                    `survey_data`");
+                    $mmf = mysqli_fetch_array($farmers);
+                    $total_farmers = number_format($mmf["all_farm"]);
+
+                    $percent = ($mmf["all_farm"]/150000) * 100;
+                    $percent = round($percent);
+                    ?>
+                    <h5> <a href="data_visualization.php"> <?php echo $total_farmers;?> / 150,000 est. </a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                  </div>
+                  <div class="card-body progress-showcase row">
+                    <div class="col">
+                      <div class="progress" style="height: 19px;">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $percent ?>%" aria-valuenow="<?php echo $percent; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-6 col-md-6 col-sm-6 p-0 box-col-6">
+                        <div class="media align-items-center">
+                          <div class="hospital-small-chart">
+                            <div class="small-bar">
+                            <?php 
+                    $house = mysqli_query($con, "SELECT 
+                    COUNT(*) AS all_house
+                    FROM
+                    `warehouse`");
+                    $mh = mysqli_fetch_array($house);
+                    $total_house = number_format($mh["all_house"]);
+
+                    $percentx = ($mh["all_house"]/350) * 100;
+                    $percentx = round($percentx);
+                    ?>
+                            <div class="card">
+                  <div class="card-header">
+                    <h5> <a href="data_visualization_house.php"> <?php echo $total_house; ?> / 350 Est. </a></h5><span> <b> Total Ware House </b> </span>
+                  </div>
+                  <div class="card-body progress-showcase row">
+                    <div class="col">
+                      <div class="progress" style="height: 19px;">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $percentx ?>%" aria-valuenow="<?php echo $percentx; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- <div class="col-xl-3 col-md-6 col-sm-6 p-0 box-col-6">
+                        <div class="media border-none align-items-center">
+                          <div class="hospital-small-chart">
+                            <div class="small-bar">
+                              <div class="small-chart3 flot-chart-container"></div>
+                            </div>
+                          </div>
+                          <div class="media-body">
+                            <div class="right-chart-content">
+                              <h4></h4><span>Household Income</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ok -->
             <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card">
                   <div class="card-header">
@@ -137,6 +224,10 @@ include("header.php");
                   </div>
                 </div>
               </div>
+
+              <!-- STAT -->
+             
+              <!-- FINSH -->
               <div class="col-xl-8 xl-100 dashboard-sec box-col-12">
                 <div class="card earning-card">
                   <div class="card-body p-0">
@@ -349,72 +440,7 @@ include("header.php");
               </div>
               
             <!-- </div> -->
-            <!-- Chart widget top Ends-->
-              <div class="col-xl-9 xl-100 chart_data_left box-col-12">
-                <div class="card">
-                  <div class="card-body p-0">
-                    <div class="row m-0 chart-main">
-                      <div class="col-xl-3 col-md-6 col-sm-6 p-0 box-col-6">
-                        <div class="media align-items-center">
-                          <div class="hospital-small-chart">
-                            <div class="small-bar">
-                              <div class="small-chart flot-chart-container"></div>
-                            </div>
-                          </div>
-                          <div class="media-body">
-                            <div class="right-chart-content">
-                              <h4></h4><span>Age</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-3 col-md-6 col-sm-6 p-0 box-col-6">
-                        <div class="media align-items-center">
-                          <div class="hospital-small-chart">
-                            <div class="small-bar">
-                              <div class="small-chart1 flot-chart-container"></div>
-                            </div>
-                          </div>
-                          <div class="media-body">
-                            <div class="right-chart-content">
-                              <h4></h4><span>Marital Status</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-3 col-md-6 col-sm-6 p-0 box-col-6">
-                        <div class="media align-items-center">
-                          <div class="hospital-small-chart">
-                            <div class="small-bar">
-                              <div class="small-chart2 flot-chart-container"></div>
-                            </div>
-                          </div>
-                          <div class="media-body">
-                            <div class="right-chart-content">
-                              <h4></h4><span>Education</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-3 col-md-6 col-sm-6 p-0 box-col-6">
-                        <div class="media border-none align-items-center">
-                          <div class="hospital-small-chart">
-                            <div class="small-bar">
-                              <div class="small-chart3 flot-chart-container"></div>
-                            </div>
-                          </div>
-                          <div class="media-body">
-                            <div class="right-chart-content">
-                              <h4></h4><span>Household Income</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- ok -->
+            
               
               <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card o-hidden profile-greeting">
