@@ -76,7 +76,7 @@ include("header.php");
                             <th>Phone</th>
                             <th>Gender</th>
                             <th>Age range</th>
-                            <th>Funding</th>
+                            <th>Extra Funding</th>
                             <th>Loan Amount</th>
                             <th>Action</th>
                           </tr>
