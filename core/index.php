@@ -204,7 +204,7 @@ include("header.php");
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-xl-6 box-col-6">
+              <!-- <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card">
                   <div class="card-header">
                     <h5>Warehouse State Hq.</h5>
@@ -223,7 +223,7 @@ include("header.php");
                     <div id="state_hq"></div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <!-- STAT -->
              
@@ -684,7 +684,7 @@ $tot_crop_g = $total_maize_grown.", ".$total_rice_grown.", ".$total_cotton_grown
 $lp_five = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_five
 FROM
-`survey_data` WHERE AgriculturalEnterprise = 'less than 50,000'");
+`survey_data` WHERE AgriculturalEnterprise = 'Less than 50,000'");
 $lve = mysqli_fetch_array($lp_five);
 $total_five_first = $lve["lp_five"];
 
