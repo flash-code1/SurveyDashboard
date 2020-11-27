@@ -1537,105 +1537,9 @@ var chart1 = new ApexCharts(
 chart1.render();
 
 // basic bar chart
-var options2 = {
-    chart: {
-        height: 350,
-        type: 'bar',
-        toolbar:{
-          show: false
-        }
-    },
-    plotOptions: {
-        bar: {
-            horizontal: true,
-        }
-    },
-    dataLabels: {
-        enabled: false
-    },
-    series: [{
-        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
-    }],
-    xaxis: {
-        categories: ['Cash', 'Water Pump', 'Fertilizer Special Blend', 'Fertilizer Organic', 'Fertilizer NPK', 'Herbicide', 'Pesticides', 'Micro-nutrient', 'Certified Seed(Kg)', 'Knapsack Sprayer'],
-    },
-    colors:[ CubaAdminConfig.primary ]
-}
 
-var chart2 = new ApexCharts(
-    document.querySelector("#basic-bar"),
-    options2
-);
 
-chart2.render();
 
-// column chart
-var options3 = {
-    chart: {
-        height: 350,
-        type: 'bar',
-        toolbar:{
-          show: false
-        }
-    },
-    plotOptions: {
-        bar: {
-            horizontal: false,
-            endingShape: 'rounded',
-            columnWidth: '55%',
-        },
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
-    },
-    series: [{
-        name: 'Land Clearing',
-        data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-    }, {
-        name: 'Harrowing',
-        data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-    }, 
-    {
-        name: 'Planting',
-        data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-    },
-    {
-        name: 'Others',
-        data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
-    }],
-    xaxis: {
-        categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-    },
-    yaxis: {
-        title: {
-            text: 'NGN (thousands)'
-        }
-    },
-    fill: {
-        opacity: 1
-
-    },
-    tooltip: {
-        y: {
-            formatter: function (val) {
-                return "$ " + val + " thousands"
-            }
-        }
-    },
-    colors:[ CubaAdminConfig.primary , CubaAdminConfig.secondary , '#51bb25']
-}
-
-var chart3 = new ApexCharts(
-    document.querySelector("#column-chart"),
-    options3
-);
-
-chart3.render();
 
 // 3d bubble chart
 
@@ -2260,33 +2164,7 @@ var chart7 = new ApexCharts(
 chart7.render();
 
 // pie chart
-var options8 = {
-    chart: {
-        width: 380,
-        type: 'pie',
-    },
-    labels: ['October', 'November', 'December', 'January', 'Others'],
-    series: [44, 55, 13, 43, 22],
-    responsive: [{
-        breakpoint: 480,
-        options: {
-            chart: {
-                width: 200
-            },
-            legend: {
-                position: 'bottom'
-            }
-        }
-    }],
-    colors:[ CubaAdminConfig.primary , CubaAdminConfig.secondary , '#51bb25', '#a927f9', '#f8d62b']
-}
 
-var chart8 = new ApexCharts(
-    document.querySelector("#piechart"),
-    options8
-);
-
-chart8.render();
 
 // donut chart
 var options9 = {
