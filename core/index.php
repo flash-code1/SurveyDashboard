@@ -110,10 +110,30 @@ include("header.php");
               <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card">
                   <div class="card-header">
-                    <h5>Warehouse data</h5>
+                    <h5>Crop Delivered to Warehouse</h5>
                   </div>
                   <div class="card-body">
                     <div id="radarchart"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Warehouse State Hq.</h5>
+                  </div>
+                  <div class="card-body apex-chart">
+                    <div id="state_hq"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Warehouse --.</h5>
+                  </div>
+                  <div class="card-body apex-chart">
+                    <div id="state_hq"></div>
                   </div>
                 </div>
               </div>
@@ -129,30 +149,32 @@ include("header.php");
                           </div>
                           <?php
                           // this code section is for sumary of cash to the dashboard\
-                          $query_male_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE GENDER = 'Male'");
+                          $query_male_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE CropGrown = 'Cotton'");
                           $qma = mysqli_fetch_array($query_male_amt);
-                          $male_amt = number_format($qma["amount"], 2);
+                          $Cotton_amt = number_format($qma["amount"], 2);
                           // code section for the female
                           // this code section is for sumary of cash to the dashboard\
-                          $query_female_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE GENDER = 'Female'");
+                          $query_female_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE CropGrown = 'Rice'");
                           $qfa = mysqli_fetch_array($query_female_amt);
-                          $female_amt = number_format($qfa["amount"], 2);
+                          $Rice_amt = number_format($qfa["amount"], 2);
+
+                          // Making Maize
+                          $query_maize_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data` WHERE CropGrown = 'Maize'");
+                          $qta = mysqli_fetch_array($query_maize_amt);
+                          $Maize_amt = number_format($qta["amount"], 2);
                           // total code
-                          $query_tot_amt = mysqli_query($con, "SELECT SUM(NairaValue) AS amount FROM `survey_data`");
-                          $qta = mysqli_fetch_array($query_tot_amt);
-                          $total_amt = number_format($qta["amount"], 2);
                           ?>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN <?php echo $male_amt; ?> </h5>
-                            <p class="font-roboto">Male</p>
+                            <h5>NGN <?php echo $Cotton_amt; ?> </h5>
+                            <p class="font-roboto">Cotton</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN <?php echo $female_amt; ?></h5>
-                            <p class="font-roboto">Female</p>
+                            <h5>NGN <?php echo $Rice_amt; ?></h5>
+                            <p class="font-roboto">Rice</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN <?php echo $total_amt; ?></h5>
-                            <p class="font-roboto">Total Loan Amount</p>
+                            <h5>NGN <?php echo $Maize_amt; ?></h5>
+                            <p class="font-roboto">Maize</p>
                           </div>
                           <div class="col-xl-12 p-0 left-btn"><a class="btn btn-gradient">Summary</a></div>
                         </div>
@@ -170,8 +192,9 @@ include("header.php");
                             <div class="col-xl-4 col-md-4 col-sm-4 col-12 p-0 justify-content-end">
                               <div class="inner-top-right">
                                 <ul class="d-flex list-unstyled justify-content-end">
-                                  <li>Male</li>
-                                  <li>Female</li>
+                                  <li>Cotton</li>
+                                  <li>Rice</li>
+                                  <li>Maize</li>
                                 </ul>
                               </div>
                             </div>
@@ -189,36 +212,32 @@ include("header.php");
                         <div class="row border-top m-0">
                           <div class="col-xl-4 pl-0 col-md-6 col-sm-6">
                             <div class="media p-0">
-                              <div class="media-left"><i class="icofont icofont-user"></i></div>
+                              <div class="media-left"><i class="icofont icofont-farmer"></i></div>
                               <div class="media-body">
-                                <h6>Total Male</h6>
+                                <h6>Cotton Delivered</h6>
                                 <?php
                             $query_male_loan = mysqli_query($con, "SELECT 
-                            COUNT(*) AS total_male
+                            SUM(FarmerDeliveredCotton) AS total_cott
                         FROM
-                        `survey_data`
-                        WHERE
-                        GENDER = 'Male'");
+                        `warehouse`");
                         $tm = mysqli_fetch_array($query_male_loan);
-                        $total_male = number_format($tm["total_male"]);
+                        $total_male = number_format($tm["total_cott"]);
 
                         // code for females
                         $query_female_loan = mysqli_query($con, "SELECT 
-                        COUNT(*) AS total_female
+                        SUM(FarmerDeliveredRice) AS total_female
                     FROM
-                    `survey_data`
-                    WHERE
-                    GENDER = 'Female'");
+                    `warehouse`");
                     $tf = mysqli_fetch_array($query_female_loan);
                     $total_female = number_format($tf["total_female"]);
 
                     // code for total male and female
-                    $query_user_loan = mysqli_query($con, "SELECT 
-                        COUNT(*) AS total_users
+                    $query_maize_loan = mysqli_query($con, "SELECT 
+                        SUM(FarmersDeliveredMaiza) AS total_users
                     FROM
-                    `survey_data`");
-                    $tu = mysqli_fetch_array($query_user_loan);
-                    $total_user = number_format($tu["total_users"]);
+                    `warehouse`");
+                    $tu = mysqli_fetch_array($query_maize_loan);
+                    $total_maize_del = number_format($tu["total_users"]);
                             ?>
                                 <p><?php echo $total_male; ?></p>
                               </div>
@@ -226,19 +245,19 @@ include("header.php");
                           </div>
                           <div class="col-xl-4 col-md-6 col-sm-6">
                             <div class="media p-0">
-                              <div class="media-left bg-secondary"><i class="icofont icofont-user"></i></div>
+                              <div class="media-left bg-secondary"><i class="icofont icofont-price"></i></div>
                               <div class="media-body">
-                                <h6>Total Female</h6>
+                                <h6>Rice Delivered</h6>
                                 <p><?php echo $total_female; ?></p>
                               </div>
                             </div>
                           </div>
                           <div class="col-xl-4 col-md-12 pr-0">
                             <div class="media p-0">
-                              <div class="media-left"><i class="icofont icofont-users"></i></div>
+                              <div class="media-left"><i class="icofont icofont-crop-plant"></i></div>
                               <div class="media-body">
-                                <h6>Total</h6>
-                                <p><?php echo $total_user; ?> </p>
+                                <h6>Maize Delivered</h6>
+                                <p><?php echo $total_maize_del; ?> </p>
                               </div>
                             </div>
                           </div>
@@ -249,28 +268,29 @@ include("header.php");
                 </div>
               </div>
               <!-- Chart widget top Start-->
+              <!-- HARVESTED BAG QUNTITYT -->
             <!-- <div class="row"> -->
               <?php
               $query_user_maize = mysqli_query($con, "SELECT 
-              COUNT(*) AS total_maize
+              SUM(*) AS total_maize
           FROM
-          `survey_data` WHERE CropGrown = 'Maize'");
+          `warehouse` WHERE Crops_Maize = '1'");
           $tm = mysqli_fetch_array($query_user_maize);
           $total_maize = number_format($tm["total_maize"]);
 
           // cotton
           $query_cotton = mysqli_query($con, "SELECT 
-              COUNT(*) AS total_cotton
+              SUM(*) AS total_cotton
           FROM
-          `survey_data` WHERE CropGrown = 'Cotton'");
+          `warehouse` WHERE Crops_Cotton = '1'");
           $tcx = mysqli_fetch_array($query_cotton);
           $total_cotton = number_format($tcx["total_cotton"]);
 
           // rice
           $query_rice = mysqli_query($con, "SELECT 
-              COUNT(*) AS total_rice
+              SUM(*) AS total_rice
           FROM
-          `survey_data` WHERE CropGrown = 'Rice'");
+          `warehouse` WHERE Crops_Rice = '1'");
           $tcr = mysqli_fetch_array($query_rice);
           $total_rice = number_format($tcr["total_rice"]);
           
@@ -646,7 +666,7 @@ $total_five_first = $lve["lp_five"];
 $lp_fort = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_fe
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '51,000-150,000'");
+`survey_data` WHERE AgriculturalEnterprise = '51,000 - 150,000'");
 $mfe = mysqli_fetch_array($lp_fort);
 $total_fort = $mfe["lp_fe"];
 
@@ -654,7 +674,7 @@ $total_fort = $mfe["lp_fe"];
 $lp_hund = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_hund
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '151,000-250,000'");
+`survey_data` WHERE AgriculturalEnterprise = '151,000 - 250,000'");
 $hn = mysqli_fetch_array($lp_hund);
 $total_hund = $hn["lp_hund"];
 
@@ -662,7 +682,7 @@ $total_hund = $hn["lp_hund"];
 $lp_thr = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_thr
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '251,000-300,000'");
+`survey_data` WHERE AgriculturalEnterprise = '251,000 - 300,000'");
 $ioo = mysqli_fetch_array($lp_thr);
 $total_thr= $ioo["lp_thr"];
 
@@ -670,7 +690,7 @@ $total_thr= $ioo["lp_thr"];
 $lp_fou = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_fou
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '301,000-400,000'");
+`survey_data` WHERE AgriculturalEnterprise = '301,000 - 400,000'");
 $xhj = mysqli_fetch_array($lp_fou);
 $total_fou = $xhj["lp_fou"];
 
@@ -678,7 +698,7 @@ $total_fou = $xhj["lp_fou"];
 $lp_fve = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_fve
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '401,000-500,000'");
+`survey_data` WHERE AgriculturalEnterprise = '401,000 - 500,000'");
 $fvb = mysqli_fetch_array($lp_fve);
 $total_fve = $fvb["lp_fve"];
 
