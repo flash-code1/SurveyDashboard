@@ -5,6 +5,7 @@ include("header.php");
 ?>
 <!-- start -->
  <!-- Page Sidebar Ends-->
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
  <div class="page-body">
           <div class="container-fluid">
             <div class="page-header">
@@ -56,7 +57,66 @@ include("header.php");
           <!-- Container-fluid starts-->
           <div class="container-fluid">
             <div class="row second-chart-list third-news-update">
-              
+            <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Loan profile</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="basic-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Planting data</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="plant_data"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>State Interviewed </h5>
+                  </div>
+                  <div class="card-body apex-chart">
+                    <div id="state_int"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Crop Grown </h5>
+                  </div>
+                  <div class="card-body apex-chart">
+                    <div id="crop_g"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>House Hold</h5>
+                  </div>
+                  <div class="card-body apex-chart">
+                    <div id="household"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-6 box-col-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Warehouse data</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="radarchart"></div>
+                  </div>
+                </div>
+              </div>
               <div class="col-xl-8 xl-100 dashboard-sec box-col-12">
                 <div class="card earning-card">
                   <div class="card-body p-0">
@@ -213,6 +273,8 @@ include("header.php");
           `survey_data` WHERE CropGrown = 'Rice'");
           $tcr = mysqli_fetch_array($query_rice);
           $total_rice = number_format($tcr["total_rice"]);
+          
+          //  DONE RICE
               ?>
               <div class="col-xl-9 xl-100 chart_data_left box-col-12">
                 <div class="card o-hidden">
@@ -333,46 +395,7 @@ include("header.php");
                 </div>
               </div>
               <!-- ok -->
-              <div class="col-sm-12 col-xl-6 box-col-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5>Loan profile</h5>
-                  </div>
-                  <div class="card-body">
-                    <div id="basic-bar"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 col-xl-6 box-col-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5>Planting data</h5>
-                  </div>
-                  <div class="card-body">
-                    <div id="column-chart"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 col-xl-6 box-col-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5>Havest Month </h5>
-                  </div>
-                  <div class="card-body apex-chart">
-                    <div id="piechart"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 col-xl-6 box-col-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5>Warehouse data</h5>
-                  </div>
-                  <div class="card-body">
-                    <div id="radarchart"></div>
-                  </div>
-                </div>
-              </div>
+              
               <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card o-hidden profile-greeting">
                   <div class="card-body">
@@ -409,6 +432,469 @@ include("header.php");
           <!-- Container-fluid Ends-->
         </div>
 <!-- end -->
+<!-- PHP QUERY FOR DATA DISPLAY -->
+<?php
+$lp_cash = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_cash
+FROM
+`survey_data` WHERE Items_Cash = '1'");
+$lpc = mysqli_fetch_array($lp_cash);
+$total_maize = $lpc["lp_cash"];
+
+// Water Pump
+$lp_pump = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_pump
+FROM
+`survey_data` WHERE Items_WaterPump = '1'");
+$lpp = mysqli_fetch_array($lp_pump);
+$total_pump = $lpp["lp_pump"];
+
+// Water Pump
+$lp_blend = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_blend
+FROM
+`survey_data` WHERE Items_FertilizerSpecialBlend = '1'");
+$lpb = mysqli_fetch_array($lp_blend);
+$total_blend = $lpb["lp_blend"];
+
+// Fertilizer Organic\
+$lp_organic = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_organic
+FROM
+`survey_data` WHERE Items_FertilizerOrganic = '1'");
+$lpo = mysqli_fetch_array($lp_organic);
+$total_organic = $lpo["lp_organic"];
+
+// NPK
+$lp_npk = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_npk
+FROM
+`survey_data` WHERE Items_FertilizerNPK = '1'");
+$lpn = mysqli_fetch_array($lp_npk);
+$total_npk = $lpn["lp_npk"];
+
+// HERBIC PRE
+$lp_pre_em = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_pre
+FROM
+`survey_data` WHERE Items_HerbicidePre_EmergencePerLitre = '1'");
+$lppe = mysqli_fetch_array($lp_pre_em);
+$total_pre_em = $lppe["lp_pre"];
+
+// HERBIC POST
+$lp_pre_em = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_post
+FROM
+`survey_data` WHERE Items_HerbicidePost_EmergencePerLitre = '1'");
+$lpps = mysqli_fetch_array($lp_pre_em);
+$total_post_em = $lpps["lp_post"];
+
+// pesticide
+$lp_pest = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_pest
+FROM
+`survey_data` WHERE Items_Pesticides = '1'");
+$lpst = mysqli_fetch_array($lp_pest);
+$total_pest = $lpst["lp_pest"];
+
+// MICRO NUTRIENT
+$lp_micro = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_micro
+FROM
+`survey_data` WHERE Items_MicroNutrient = '1'");
+$lpmc = mysqli_fetch_array($lp_micro);
+$total_micro = $lpmc["lp_micro"];
+
+// SEED
+$lp_seed = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_seed
+FROM
+`survey_data` WHERE Items_CertifiedSeedPerKg = '1'");
+$lpsd = mysqli_fetch_array($lp_seed);
+$total_seed = $lpsd["lp_seed"];
+
+// Sprayer
+$lp_sprayer = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_sprayer
+FROM
+`survey_data` WHERE Items_KnapsackSprayer = '1'");
+$lpsy = mysqli_fetch_array($lp_sprayer);
+$total_sprayer = $lpsy["lp_sprayer"];
+
+// RUN JSON CODE
+$loan_profile_data = $total_maize.", ".$total_pump.", ".$total_blend.", ".$total_organic.", ".$total_npk.", ".$total_pre_em.", ".$total_post_em.", ".$total_pest.", ".$total_micro.", ".$total_seed.", ".$total_sprayer;
+
+
+
+
+
+// Data for planting data
+$current_date = date('Y-m-d');
+$last_date = date('Y-m-d', strtotime("-1 months", strtotime($current_date)));
+$two_date = date('Y-m-d', strtotime("-2 months", strtotime($current_date)));
+$three_date = date('Y-m-d', strtotime("-3 months", strtotime($current_date)));
+
+// Data description in Text\
+$current_month = date('M', strtotime($current_date));
+$last_month = date('M', strtotime($last_date));
+$two_month = date('M', strtotime($two_date));
+$three_month = date('M', strtotime($three_date));
+
+// query data
+$select_land_current = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE SubmissionDate >= $current_date AND SubmissionDate < $last_date ");
+$qx = mysqli_fetch_array($select_land_current);
+$land_clear_current = $qx["land_clear"];
+
+
+
+
+
+
+
+
+
+
+
+
+// Done with Survey Data
+// State Interviewed Adamawa
+$lp_adam = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_adam
+FROM
+`survey_data` WHERE StateInterview = 'Adamawa'");
+$lad = mysqli_fetch_array($lp_adam);
+$total_adam = $lad["lp_adam"];
+// State Interviewd Gombe
+$lp_gombe = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_gombe
+FROM
+`survey_data` WHERE StateInterview = 'Gombe'");
+$lgb = mysqli_fetch_array($lp_gombe);
+$total_gombe = $lgb["lp_gombe"];
+// State Yobe
+$lp_yobe = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_yobe
+FROM
+`survey_data` WHERE StateInterview = 'Adamawa'");
+$lyb = mysqli_fetch_array($lp_yobe);
+$total_yobe = $lyb["lp_yobe"];
+// state Borno
+$lp_borno = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_borno
+FROM
+`survey_data` WHERE StateInterview = 'Borno'");
+$lbr = mysqli_fetch_array($lp_borno);
+$total_borno = $lbr["lp_borno"];
+// Taraba
+$lp_taraba = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_taraba
+FROM
+`survey_data` WHERE StateInterview = 'Taraba'");
+$ltr = mysqli_fetch_array($lp_taraba);
+$total_taraba = $ltr["lp_taraba"];
+
+// Anambra
+$lp_bra = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_bra
+FROM
+`survey_data` WHERE StateInterview = 'Anambra'");
+$ltv = mysqli_fetch_array($lp_bra);
+$total_anambra = $ltv["lp_bra"];
+
+
+$state_intv = $total_adam.", ".$total_gombe.", ".$total_yobe.", ".$total_borno.", ".$total_taraba.", ".$total_anambra;
+
+
+
+
+
+// Crop Grown Data
+// MAIZE 
+$lp_maize = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_maize
+FROM
+`survey_data` WHERE CropGrown = 'Maize'");
+$lme = mysqli_fetch_array($lp_maize);
+$total_maize_grown = $lme["lp_maize"];
+//RICE
+$lp_rice = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_rice
+FROM
+`survey_data` WHERE CropGrown = 'Rice'");
+$lri = mysqli_fetch_array($lp_rice);
+$total_rice_grown = $lri["lp_rice"];
+//COTTON
+$lp_cotton = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_cotton
+FROM
+`survey_data` WHERE CropGrown = 'Cotton'");
+$lco = mysqli_fetch_array($lp_cotton);
+$total_cotton_grown = $lco["lp_cotton"];
+
+$tot_crop_g = $total_maize_grown.", ".$total_rice_grown.", ".$total_cotton_grown;
+
+
+// LessHouse hold
+$lp_five = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_five
+FROM
+`survey_data` WHERE AgriculturalEnterprise = 'less than 50,000'");
+$lve = mysqli_fetch_array($lp_five);
+$total_five_first = $lve["lp_five"];
+
+// Fiv to one
+$lp_fort = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_fe
+FROM
+`survey_data` WHERE AgriculturalEnterprise = '51,000-150,000'");
+$mfe = mysqli_fetch_array($lp_fort);
+$total_fort = $mfe["lp_fe"];
+
+// two hundred
+$lp_hund = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_hund
+FROM
+`survey_data` WHERE AgriculturalEnterprise = '151,000-250,000'");
+$hn = mysqli_fetch_array($lp_hund);
+$total_hund = $hn["lp_hund"];
+
+// three
+$lp_thr = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_thr
+FROM
+`survey_data` WHERE AgriculturalEnterprise = '251,000-300,000'");
+$ioo = mysqli_fetch_array($lp_thr);
+$total_thr= $ioo["lp_thr"];
+
+// fou
+$lp_fou = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_fou
+FROM
+`survey_data` WHERE AgriculturalEnterprise = '301,000-400,000'");
+$xhj = mysqli_fetch_array($lp_fou);
+$total_fou = $xhj["lp_fou"];
+
+// fve
+$lp_fve = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_fve
+FROM
+`survey_data` WHERE AgriculturalEnterprise = '401,000-500,000'");
+$fvb = mysqli_fetch_array($lp_fve);
+$total_fve = $fvb["lp_fve"];
+
+// More
+// fou
+$lp_mre = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_mre
+FROM
+`survey_data` WHERE AgriculturalEnterprise = 'More than 500,000'");
+$xhd = mysqli_fetch_array($lp_mre);
+$total_mre = $xhd["lp_mre"];
+
+$house_hold_get = $total_five_first.", ".$total_fort.", ".$total_hun.", ".$total_fou.", ".$total_fve.", ".$total_mre; 
+?>
+<!-- 1. LOAN PROF -->
+<!-- EMD PHP QUERY -->
+
+<!-- DATA INTERVAL FOR BUSINESS -->
+<!-- JAVASCRIPT CHART -->
+<script>
+  // House hold
+var house_hold = {
+  chart: {
+    height: 350,
+        type: 'bar',
+        toolbar:{
+          show: false
+        }
+  },
+  plotOptions: {
+        bar: {
+            horizontal: true,
+        }
+    },
+  dataLabels: {
+        enabled: false
+    },
+    series: [{
+        data: [<?php echo $house_hold_get ?>]
+    }],
+    xaxis: {
+        categories: ['Less than 50', '51,000 - 100,000', '101,000 - 150,000', '151,000 - 250,000', '251,000 - 300,000', '301,000 - 400,000', '401,000 - 500,000', 'More than 500,000'],
+    }
+}
+
+var househ = new ApexCharts(
+    document.querySelector("#household"),
+    house_hold
+);
+
+househ.render();
+
+  // loan profile
+var loan_profile = {
+  chart: {
+    height: 350,
+        type: 'bar',
+        toolbar:{
+          show: false
+        }
+  },
+  plotOptions: {
+        bar: {
+            horizontal: true,
+        }
+    },
+  dataLabels: {
+        enabled: false
+    },
+    series: [{
+        data: [<?php echo $loan_profile_data ?>]
+    }],
+    xaxis: {
+        categories: ['Cash', 'Water Pump', 'Fertilizer Special Blend', 'Fertilizer Organic', 'Fertilizer NPK', 'Herbicide Pre_Emergence PerLitre', 'Herbicide Post_Emergence PerLitre', 'Pesticides', 'Micro-nutrient', 'Certified Seed(Kg)', 'Knapsack Sprayer'],
+    }
+}
+
+var loan_p = new ApexCharts(document.querySelector("#basic-bar"), loan_profile);
+
+loan_p.render();
+
+// Planting Data
+
+// column chart
+var plant = {
+    chart: {
+        height: 350,
+        type: 'bar',
+        toolbar:{
+          show: false
+        }
+    },
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            endingShape: 'rounded',
+            columnWidth: '55%',
+        },
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent']
+    },
+    series: [{
+        name: 'Land Clearing',
+        data: [44, 55, 57, <?php echo $land_clear_current; ?>]
+    }, {
+        name: 'Harrowing',
+        data: [76, 85, 101, 98]
+    }, 
+    {
+        name: 'Planting',
+        data: [76, 85, 101, 98]
+    },
+    {
+        name: 'Others',
+        data: [35, 41, 36, 26]
+    }],
+    xaxis: {
+        categories: [   '<?php echo $three_month;?>', '<?php echo $two_month; ?>', '<?php echo $last_month; ?>', '<?php echo $current_month; ?>',],
+    },
+    yaxis: {
+        title: {
+            text: 'NGN (thousands)'
+        }
+    },
+    fill: {
+        opacity: 1
+
+    },
+    tooltip: {
+        y: {
+            formatter: function (val) {
+                return "₦ " + val
+            }
+        }
+    },
+    colors:[  '#8F6AFB', '#FE3158', '#51bb25', '#F8D62B']
+}
+
+var plant_data = new ApexCharts(
+    document.querySelector("#plant_data"),
+    plant
+);
+
+plant_data.render();
+
+
+
+// state Interviewed
+var state_int = {
+  chart: {
+    height: 350,
+        type: 'bar',
+        toolbar:{
+          show: false
+        }
+  },
+  plotOptions: {
+        bar: {
+            horizontal: true,
+        }
+    },
+  dataLabels: {
+        enabled: false
+    },
+    series: [{
+        data: [<?php echo $state_intv ?>]
+    }],
+    xaxis: {
+        categories: ['Adamawa', 'Gombe', 'Yobe', 'Borno', 'Taraba', 'Anambra'],
+    }
+}
+
+var state_pie = new ApexCharts(
+    document.querySelector("#state_int"),
+    state_int
+);
+
+state_pie.render();
+
+
+// Crop Grown
+var crop_grown = {
+    chart: {
+        width: 380,
+        type: 'pie',
+    },
+    labels: ['Maize', 'Rice', 'Cotton'],
+    series: [<?php echo $tot_crop_g ?>],
+    responsive: [{
+        breakpoint: 480,
+        options: {
+            chart: {
+                width: 200
+            },
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }],
+    colors:[ '#FE3158', '#a927f9', '#f8d62b']
+}
+
+var crop_pie = new ApexCharts(
+    document.querySelector("#crop_g"),
+    crop_grown
+);
+
+crop_pie.render();
+</script>
+<!-- END -->
 <?php
 include("footer.php");
 ?>
