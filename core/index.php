@@ -844,6 +844,10 @@ var plant = {
         data: [76, 85, 101, 98]
     },
     {
+        name: 'Harvesting',
+        data: [76, 85, 101, 98]
+    },
+    {
         name: 'Others',
         data: [35, 41, 36, 26]
     }],
