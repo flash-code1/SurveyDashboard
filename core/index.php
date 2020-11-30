@@ -640,15 +640,15 @@ $ltr = mysqli_fetch_array($lp_taraba);
 $total_taraba = $ltr["lp_taraba"];
 
 // Anambra
-$lp_bra = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_bra
-FROM
-`survey_data` WHERE StateInterview = 'Anambra'");
-$ltv = mysqli_fetch_array($lp_bra);
-$total_anambra = $ltv["lp_bra"];
+// $lp_bra = mysqli_query($con, "SELECT 
+// COUNT(*) AS lp_bra
+// FROM
+// `survey_data` WHERE StateInterview = 'Anambra'");
+// $ltv = mysqli_fetch_array($lp_bra);
+// $total_anambra = $ltv["lp_bra"];
 
 
-$state_intv = $total_adam.", ".$total_gombe.", ".$total_yobe.", ".$total_borno.", ".$total_taraba.", ".$total_anambra;
+$state_intv = $total_adam.", ".$total_gombe.", ".$total_yobe.", ".$total_borno.", ".$total_taraba;
 
 
 
@@ -903,7 +903,7 @@ var state_int = {
         data: [<?php echo $state_intv ?>]
     }],
     xaxis: {
-        categories: ['Adamawa', 'Gombe', 'Yobe', 'Borno', 'Taraba', 'Anambra'],
+        categories: ['Adamawa', 'Gombe', 'Yobe', 'Borno', 'Taraba'],
     }
 }
 
