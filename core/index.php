@@ -621,7 +621,7 @@ $total_gombe = $lgb["lp_gombe"];
 $lp_yobe = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_yobe
 FROM
-`survey_data` WHERE StateInterview = 'Adamawa'");
+`survey_data` WHERE StateInterview = 'Yobe'");
 $lyb = mysqli_fetch_array($lp_yobe);
 $total_yobe = $lyb["lp_yobe"];
 // state Borno
