@@ -387,7 +387,7 @@ include("header.php");
           
           //  DONE RICE
               ?>
-              <div class="col-xl-9 xl-100 chart_data_left box-col-12">
+              <div class="col-xl-9 xl-100 chart_data_left box-col-12" hidden>
                 <div class="card o-hidden">
                   <div class="chart-widget-top">
                     <div class="row card-body">
@@ -404,7 +404,7 @@ include("header.php");
                   </div>
                 </div>
               </div>
-              <div class="col-xl-9 xl-100 chart_data_left box-col-12">
+              <div class="col-xl-9 xl-100 chart_data_left box-col-12" hidden>
                 <div class="card o-hidden">
                   <div class="chart-widget-top">
                     <div class="row card-body">
@@ -421,7 +421,7 @@ include("header.php");
                   </div>
                 </div>
               </div>
-              <div class="col-xl-9 xl-100 chart_data_left box-col-12">
+              <div class="col-xl-9 xl-100 chart_data_left box-col-12" hidden>
                 <div class="card o-hidden">
                   <div class="chart-widget-top">
                     <div class="row card-body">
@@ -441,6 +441,108 @@ include("header.php");
               
             <!-- </div> -->
             
+            <div class="col-xl-12">
+              <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- MAP -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPrkS4dgB9aLB0rRB-V3StNCwrY9k-p3g&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Farmers and Warehouse Location</h5>
+                    <div class="row">
+                    <!-- <div class="col-md-5">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/crush-culture.appspot.com/o/Location%2Fverified_new.png?alt=media&token=4addea67-5557-45d4-b41f-f94c9b571983" height="20px" width="20px" alt="">
+                    <span>Farmers</span> 
+                    </div> -->
+                    <div class="col-md-5">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/crush-culture.appspot.com/o/Location%2Fupcoming_new.png?alt=media&token=41d3771e-65af-47c6-ad0d-53cee51c47b9" height="20px" width="20px" alt="">
+                    <span>Warehouse</span> 
+                    </div>
+                    </div>
+                    
+                  </div>
+                  <div class="card-body">
+                  <div class="map-js-height" id="map"></div>
+                  </div>
+                  <!-- PHP SCRIPT TO GET ALL DATA -->
+                  <?php
+                  $query_two_coordinate = mysqli_query($con, "SELECT * FROM `warehouse` ORDER BY id DESC");
+                  ?>
+                  <script>
+                      let map;
+let lat;
+let lng;
+                      if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    console.log("Geolocation is not supported by this browser.");
+  }
+ function showPosition(position) {
+  lat = " "+position.coords.latitude;
+  lng = " "+position.coords.longitude;
+  initMap();
+}
+// contry restriction
+const NEW_NIGERIA_BOUNDS = {
+        north: 2.213965683043,
+        south: 10.124121933043,
+        west: 2.131202795549269,
+        east: 15.982786876781637,
+      };
+function initMap() {
+    
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: new google.maps.LatLng(lat, lng),
+    restriction: {
+       latLngBounds: NEW_NIGERIA_BOUNDS,
+       strictBounds: false,
+    },
+    zoom: 7,
+    streetViewControl: false,
+    mapTypeControl: false,
+  });
+  const iconBase =
+    "https://firebasestorage.googleapis.com/v0/b/crush-culture.appspot.com/o/Location%2F";
+  const icons = {
+    library: {
+      icon: iconBase + "upcoming_new.png?alt=media&token=41d3771e-65af-47c6-ad0d-53cee51c47b9",
+    },
+    info: {
+      icon: iconBase + "verified_new.png?alt=media&token=4addea67-5557-45d4-b41f-f94c9b571983",
+    },
+  };
+  const features = [
+    <?php
+    if (mysqli_num_rows($query_two_coordinate) > 0) {
+      while ($row = mysqli_fetch_array($query_two_coordinate)) {
+        $lat = $row["CurrentLocationLatitude"];
+        $lng = $row["CurrentLocationLongitude"];
+        $image_type = "".'"library"'."";
+        // echo $lat.$image_type;
+        $frameit = "{ position: new google.maps.LatLng($lat, $lng), type: $image_type }, ";
+        echo $frameit;
+    ?>
+    <?php
+    }
+  }
+    ?>
+  ];
+
+  // Create markers.
+  for (let i = 0; i < features.length; i++) {
+    const marker = new google.maps.Marker({
+      position: features[i].position,
+      icon: icons[features[i].type].icon,
+      map: map,
+    });
+  }
+}
+
+                  </script>
+                </div>
+              </div>
               
               <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card o-hidden profile-greeting">
