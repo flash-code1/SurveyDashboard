@@ -468,7 +468,7 @@ include("header.php");
                   </div>
                   <!-- PHP SCRIPT TO GET ALL DATA -->
                   <?php
-                  $query_two_coordinate = mysqli_query($con, "SELECT * FROM `warehouse` WHERE CurrentLocationLatitude IS NOT NULL AND CurrentLocationLongitude IS NOT NULL ORDER BY id DESC");
+                  $query_two_coordinate = mysqli_query($con, "SELECT * FROM `warehouse` WHERE CurrentLocationLatitude != '' AND CurrentLocationLongitude != '' ORDER BY id DESC");
                   ?>
                   <script>
                       let map;
