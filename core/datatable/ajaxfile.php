@@ -45,8 +45,8 @@ while ($row = mysqli_fetch_assoc($empRecords)) {
     		"PhoneOfBeneficiary"=>$row['PhoneOfBeneficiary'],
     		"GENDER"=>$row['GENDER'],
     		"AGERANGE"=>$row['AGERANGE'],
-    		"Funding"=>$row['Funding'],
-    		"NairaValue"=>$row['NairaValue'],
+    		"CropGrown"=>$row['CropGrown'],
+    		"AgriculturalEnterprise"=>$row['AgriculturalEnterprise'],
     		"close"=>"<a href='data_single.php?id=$id' class='btn btn-pill btn-success btn-air-success btn-success-gradien' type='button'>View More</a>"
     	);
 }

@@ -76,8 +76,8 @@ include("header.php");
                             <th>Phone</th>
                             <th>Gender</th>
                             <th>Age range</th>
-                            <th>Extra Funding</th>
-                            <th>Loan Amount</th>
+                            <th>Crop Grown</th>
+                            <th>Agricultural Enterprise</th>
                             <th>Action</th>
                           </tr>
                         </thead>
@@ -110,8 +110,8 @@ include("header.php");
                     { data: 'PhoneOfBeneficiary' },
                     { data: 'GENDER' },
                     { data: 'AGERANGE' },
-                    { data: 'Funding' },
-                    { data: 'NairaValue' },
+                    { data: 'CropGrown' },
+                    { data: 'AgriculturalEnterprise' },
                     { data: 'close' },
                 ]
             });

@@ -78,6 +78,7 @@ include("header.php");
 
                     $percent = ($mmf["all_farm"]/150000) * 100;
                     $percent = round($percent);
+        
                     ?>
                     <h5> <a href="data_visualization.php"> <?php echo $total_farmers;?> / 150,000 est. </a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
@@ -583,65 +584,65 @@ function initMap() {
 <!-- PHP QUERY FOR DATA DISPLAY -->
 <?php
 $lp_cash = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_cash
+SUM(CashAmount) AS lp_cash
 FROM
-`survey_data` WHERE Items_Cash = '1'");
+`survey_data`");
 $lpc = mysqli_fetch_array($lp_cash);
 $total_maize = $lpc["lp_cash"];
 
 // Water Pump
 $lp_pump = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_pump
+SUM(WaterPumpNairaValue) AS lp_pump
 FROM
-`survey_data` WHERE Items_WaterPump = '1'");
+`survey_data`");
 $lpp = mysqli_fetch_array($lp_pump);
 $total_pump = $lpp["lp_pump"];
 
 // Water Pump
 $lp_blend = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_blend
+SUM(FertilizerSpecialBlendNairaValue) AS lp_blend
 FROM
-`survey_data` WHERE Items_FertilizerSpecialBlend = '1'");
+`survey_data`");
 $lpb = mysqli_fetch_array($lp_blend);
 $total_blend = $lpb["lp_blend"];
 
 // Fertilizer Organic\
 $lp_organic = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_organic
+SUM(FertilizerOrganicNairaValue) AS lp_organic
 FROM
-`survey_data` WHERE Items_FertilizerOrganic = '1'");
+`survey_data`");
 $lpo = mysqli_fetch_array($lp_organic);
 $total_organic = $lpo["lp_organic"];
 
 // NPK
 $lp_npk = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_npk
+SUM(FertilizerNPKNairaValue) AS lp_npk
 FROM
-`survey_data` WHERE Items_FertilizerNPK = '1'");
+`survey_data`");
 $lpn = mysqli_fetch_array($lp_npk);
 $total_npk = $lpn["lp_npk"];
 
 // HERBIC PRE
 $lp_pre_em = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_pre
+SUM(HerbicidePre_EmergencePerLitreNairaValue) AS lp_pre
 FROM
-`survey_data` WHERE Items_HerbicidePre_EmergencePerLitre = '1'");
+`survey_data`");
 $lppe = mysqli_fetch_array($lp_pre_em);
 $total_pre_em = $lppe["lp_pre"];
 
 // HERBIC POST
 $lp_pre_em = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_post
+SUM(HerbicidePost_EmergencePerLitreNairaValue) AS lp_post
 FROM
-`survey_data` WHERE Items_HerbicidePost_EmergencePerLitre = '1'");
+`survey_data`");
 $lpps = mysqli_fetch_array($lp_pre_em);
 $total_post_em = $lpps["lp_post"];
 
 // pesticide
 $lp_pest = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_pest
+SUM(PesticidesNairaValue) AS lp_pest
 FROM
-`survey_data` WHERE Items_Pesticides = '1'");
+`survey_data`");
 $lpst = mysqli_fetch_array($lp_pest);
 $total_pest = $lpst["lp_pest"];
 
@@ -655,17 +656,17 @@ $total_micro = $lpmc["lp_micro"];
 
 // SEED
 $lp_seed = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_seed
+SUM(CertifiedSeedPerKgtNairaValue) AS lp_seed
 FROM
-`survey_data` WHERE Items_CertifiedSeedPerKg = '1'");
+`survey_data`");
 $lpsd = mysqli_fetch_array($lp_seed);
 $total_seed = $lpsd["lp_seed"];
 
 // Sprayer
 $lp_sprayer = mysqli_query($con, "SELECT 
-COUNT(*) AS lp_sprayer
+SUM(KnapsackSprayerNairaValue) AS lp_sprayer
 FROM
-`survey_data` WHERE Items_KnapsackSprayer = '1'");
+`survey_data`");
 $lpsy = mysqli_fetch_array($lp_sprayer);
 $total_sprayer = $lpsy["lp_sprayer"];
 
@@ -675,12 +676,12 @@ $loan_profile_data = $total_maize.", ".$total_pump.", ".$total_blend.", ".$total
 
 
 
-
 // Data for planting data
 $current_date = date('Y-m-d');
 $last_date = date('Y-m-d', strtotime("-1 months", strtotime($current_date)));
 $two_date = date('Y-m-d', strtotime("-2 months", strtotime($current_date)));
 $three_date = date('Y-m-d', strtotime("-3 months", strtotime($current_date)));
+$final_date = date('Y-m-d', strtotime("-4 months", strtotime($current_date)));
 
 // Data description in Text\
 $current_month = date('M', strtotime($current_date));
@@ -689,19 +690,159 @@ $two_month = date('M', strtotime($two_date));
 $three_month = date('M', strtotime($three_date));
 
 // query data
-$select_land_current = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE SubmissionDate >= $current_date AND SubmissionDate < $last_date ");
+
+
+// LAND CLEARING
+$select_land_current = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date')");
 $qx = mysqli_fetch_array($select_land_current);
 $land_clear_current = $qx["land_clear"];
+if ($land_clear_current == "") {
+  $land_clear_current = 0;
+}
+// clearing data one moneth
+$select_land_last = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date')");
+$qxx = mysqli_fetch_array($select_land_last);
+$land_clear_last = $qxx["land_clear"];
+if ($land_clear_last == "") {
+  $land_clear_last = 0;
+}
+// two month
+$select_land_two = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date')");
+$qxxx = mysqli_fetch_array($select_land_two);
+$land_clear_two = $qxxx["land_clear"];
+if ($land_clear_two == "") {
+  $land_clear_two = 0;
+}
+// 4th month
+$select_land_three = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date')");
+$qxxxx = mysqli_fetch_array($select_land_three);
+$land_clear_three = $qxxxx["land_clear"];
+if ($land_clear_three == "") {
+  $land_clear_three = 0;
+}
+
+//  echo $land_clear_three." ,".$land_clear_two." ,". $land_clear_last." ,".$land_clear_current."--"; 
+
+// HarrowingG
+$select_harrow_current = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date')");
+$hx = mysqli_fetch_array($select_harrow_current);
+$harrow_current = $hx["harrow"];
+if ($harrow_current == "") {
+  $harrow_current = 0;
+}
+// clearing data one moneth
+$select_harrow_last = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date')");
+$hxx = mysqli_fetch_array($select_harrow_last);
+$harrow_last = $hxx["harrow"];
+if ($harrow_last == "") {
+  $harrow_last = 0;
+}
+// two month
+$select_harrow_two = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date')");
+$hxxx = mysqli_fetch_array($select_harrow_two);
+$harrow_two = $hxxx["harrow"];
+if ($harrow_two == "") {
+  $harrow_two = 0;
+}
+// 4th month
+$select_harrow_three = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date')");
+$hxxxx = mysqli_fetch_array($select_harrow_three);
+$harrow_three = $hxxxx["harrow"];
+if ($harrow_three == "") {
+  $harrow_three = 0;
+}
+
+//  echo $land_clear_three." ,".$land_clear_two." ,". $land_clear_last." ,".$land_clear_current."--"; 
+
+// Planting
+$select_plant_current = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date')");
+$px = mysqli_fetch_array($select_plant_current);
+$plant_current = $px["plant"];
+if ($plant_current == "") {
+  $plant_current = 0;
+}
+// clearing data one moneth
+$select_plant_last = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date')");
+$pxx = mysqli_fetch_array($select_plant_last);
+$plant_last = $pxx["plant"];
+if ($plant_last == "") {
+  $plant_last = 0;
+}
+// two month
+$select_plant_two = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date')");
+$pxxx = mysqli_fetch_array($select_plant_two);
+$plant_two = $pxxx["plant"];
+if ($plant_two == "") {
+  $plant_two = 0;
+}
+// 4th month
+$select_plant_three = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date')");
+$pxxxx = mysqli_fetch_array($select_plant_three);
+$plant_three = $pxxxx["plant"];
+if ($plant_three == "") {
+  $plant_three = 0;
+}
 
 
+// HARVESTING
+$select_harvest_current = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date') AND harvested = 'Yes'");
+$hax = mysqli_fetch_array($select_harvest_current);
+$harvest_current = $hax["harvest"];
+if ($harvest_current == "") {
+  $harvest_current = 0;
+}
+// clearing data one moneth
+$select_harvest_last = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date') AND harvested = 'Yes'");
+$haxx = mysqli_fetch_array($select_harvest_last);
+$harvest_last = $haxx["harvest"];
+if ($harvest_last == "") {
+  $harvest_last = 0;
+}
+// two month
+$select_harvest_two = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date') AND harvested = 'Yes'");
+$haxxx = mysqli_fetch_array($select_harvest_two);
+$harvest_two = $haxxx["harvest"];
+if ($harvest_two == "") {
+  $harvest_two = 0;
+}
+// 4th month
+$select_harvest_three = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date') AND harvested = 'Yes'");
+$haxxxx = mysqli_fetch_array($select_harvest_three);
+$harvest_three = $haxxxx["harvest"];
+if ($harvest_three == "") {
+  $harvest_three = 0;
+}
 
 
-
-
-
-
-
-
+// OTHERS
+// othering
+$select_other_current = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date')");
+$ox = mysqli_fetch_array($select_other_current);
+$other_current = $ox["other"];
+if ($other_current == "") {
+  $other_current = 0;
+}
+// clearing data one moneth
+$select_other_last = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date')");
+$oxx = mysqli_fetch_array($select_other_last);
+$other_last = $oxx["other"];
+if ($other_last == "") {
+  $other_last = 0;
+}
+// two month
+$select_other_two = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date')");
+$oxxx = mysqli_fetch_array($select_other_two);
+$other_two = $oxxx["other"];
+if ($other_two == "") {
+  $other_two = 0;
+}
+// 4th month
+$select_other_three = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date')");
+$oxxxx = mysqli_fetch_array($select_other_three);
+$other_three = $oxxxx["other"];
+if ($other_three == "") {
+  $other_three = 0;
+}
 
 
 // Done with Survey Data
@@ -794,15 +935,14 @@ $total_five_first = $lve["lp_five"];
 $lp_fort = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_fe
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '51,000 - 150,000'");
+`survey_data` WHERE AgriculturalEnterprise = '51,000–150,000'");
 $mfe = mysqli_fetch_array($lp_fort);
 $total_fort = $mfe["lp_fe"];
-
 // two hundred
 $lp_hund = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_hund
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '151,000 - 250,000'");
+`survey_data` WHERE AgriculturalEnterprise = '151,000-250,000'");
 $hn = mysqli_fetch_array($lp_hund);
 $total_hund = $hn["lp_hund"];
 
@@ -810,7 +950,7 @@ $total_hund = $hn["lp_hund"];
 $lp_thr = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_thr
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '251,000 - 300,000'");
+`survey_data` WHERE AgriculturalEnterprise = '251,000-300,000'");
 $ioo = mysqli_fetch_array($lp_thr);
 $total_thr= $ioo["lp_thr"];
 
@@ -818,7 +958,7 @@ $total_thr= $ioo["lp_thr"];
 $lp_fou = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_fou
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '301,000 - 400,000'");
+`survey_data` WHERE AgriculturalEnterprise = '301,000-400,000'");
 $xhj = mysqli_fetch_array($lp_fou);
 $total_fou = $xhj["lp_fou"];
 
@@ -826,7 +966,7 @@ $total_fou = $xhj["lp_fou"];
 $lp_fve = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_fve
 FROM
-`survey_data` WHERE AgriculturalEnterprise = '401,000 - 500,000'");
+`survey_data` WHERE AgriculturalEnterprise = '401,000-500,000'");
 $fvb = mysqli_fetch_array($lp_fve);
 $total_fve = $fvb["lp_fve"];
 
@@ -868,7 +1008,7 @@ var house_hold = {
         data: [<?php echo $house_hold_get ?>]
     }],
     xaxis: {
-        categories: ['Less than 50', '51,000 - 100,000', '101,000 - 150,000', '151,000 - 250,000', '251,000 - 300,000', '301,000 - 400,000', '401,000 - 500,000', 'More than 500,000'],
+        categories: ['Less than 50', '51,000 - 150,000', '151,000 - 250,000', '251,000 - 300,000', '301,000 - 400,000', '401,000 - 500,000', 'More than 500,000'],
     }
 }
 
@@ -936,22 +1076,22 @@ var plant = {
     },
     series: [{
         name: 'Land Clearing',
-        data: [44, 55, 57, <?php echo $land_clear_current; ?>]
+        data: [<?php echo $land_clear_three." ,".$land_clear_two." ,". $land_clear_last." ,".$land_clear_current; ?>]
     }, {
         name: 'Harrowing',
-        data: [76, 85, 101, 98]
+        data: [<?php echo $harrow_three." ,".$harrow_two." ,". $harrow_last." ,".$harrow_current; ?>]
     }, 
     {
         name: 'Planting',
-        data: [76, 85, 101, 98]
+        data: [<?php echo $plant_three." ,".$plant_two." ,". $plant_last." ,".$plant_current; ?>]
     },
     {
         name: 'Harvesting',
-        data: [76, 85, 101, 98]
+        data: [<?php echo $harvest_three." ,".$harvest_two." ,". $harvest_last." ,".$harvest_current; ?>]
     },
     {
         name: 'Others',
-        data: [35, 41, 36, 26]
+        data: [<?php echo $other_three." ,".$other_two." ,". $other_last." ,".$other_current; ?>]
     }],
     xaxis: {
         categories: [   '<?php echo $three_month;?>', '<?php echo $two_month; ?>', '<?php echo $last_month; ?>', '<?php echo $current_month; ?>',],

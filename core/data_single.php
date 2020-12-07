@@ -154,12 +154,12 @@ if (isset($_GET["id"])) {
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Cash: <b> <?php echo $row["Items_Cash"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Cash: <b> <?php echo $row["CashAmount"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">FertilizerSpecialBlend: <b> <?php echo $row["Items_FertilizerSpecialBlend"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">FertilizerSpecialBlend: <b> NGN <?php echo $row["FertilizerSpecialBlendNairaValue"]." - ".$row["FertilizerSpecialBlendQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -167,17 +167,17 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">FertilizerNPK: <b> <?php echo $row["Items_FertilizerNPK"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">FertilizerNPK: <b> NGN <?php echo $row["FertilizerNPKNairaValue"]." - ".$row["FertilizerNPKQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">HerbicidePre_EmergencePerLitre: <b> <?php echo $row["Items_HerbicidePre_EmergencePerLitre"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">HerbicidePre_EmergencePerLitre: <b> NGN<?php echo $row["HerbicidePre_EmergencePerLitreNairaValue"]." - ".$row["HerbicidePre_EmergencePerLitreQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">HerbicidePost_EmergencePerLitre: <b> <?php echo $row["Items_HerbicidePost_EmergencePerLitre"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">HerbicidePost_EmergencePerLitre: <b> NGN <?php echo $row["HerbicidePost_EmergencePerLitreNairaValue"]." - ".$row["HerbicidePost_EmergencePerLitreQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -185,17 +185,17 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Pesticides: <b> <?php echo $row["Items_Pesticides"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Pesticides: <b> GN <?php echo $row["PesticidesNairaValue"]." - ".$row["PesticidesQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">MicroNutrient: <b> <?php echo $row["Items_MicroNutrient"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">MicroNutrient: <b> NGN <?php echo $row["MicronutrientNairaValue"]." - ".$row["MicronutrientQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">CertifiedSeedPerKg: <b> <?php echo $row["Items_CertifiedSeedPerKg"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">CertifiedSeedPerKg: <b> NGN <?php echo $row["CertifiedSeedPerKgtNairaValue"]." - ".$row["CertifiedSeedPerKgQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -203,32 +203,17 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">KnapsackSprayer: <b> <?php echo $row["Items_KnapsackSprayer"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">KnapsackSprayer: <b> NGN <?php echo $row["KnapsackSprayerNairaValue"]." - ".$row["KnapsackSprayerQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">WaterPump: <b> <?php echo $row["Items_WaterPump"]; ?> </b> </h5>
-                          </div>
-                    </div>
-                    <div class="col-md-4">
-                          <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Item Unit: <b> <?php echo $row["ItemUnit"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">WaterPump: <b> NGN <?php echo $row["WaterPumpNairaValue"]." - ".$row["WaterPumpQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
 
                       <div class="row">
-                      <div class="col-md-4">
-                          <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Item Quantity: <b> <?php echo $row["Qauntity"]; ?> </b> </h5>
-                          </div>
-                    </div>
-                    <div class="col-md-4">
-                          <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Naira Value: NGN<?php echo number_format($row["NairaValue"], 2); ?> </b> </h5>
-                          </div>
-                    </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
                           <h5 class="m-0 f-18">Was Cash Sufficient: <b> <?php echo $row["cash"]; ?> </b> </h5>
