@@ -201,7 +201,7 @@ include("header.php");
                     <h5>Crop Delivered to Warehouse</h5>
                   </div>
                   <div class="card-body">
-                    <div id="radarchart"></div>
+                    <div id="modet"></div>
                   </div>
                 </div>
               </div>
@@ -281,7 +281,7 @@ include("header.php");
                                 </ul>
                               </div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-sm-4 col-12 p-0 justify-content-end">
+                            <!-- <div class="col-xl-4 col-md-4 col-sm-4 col-12 p-0 justify-content-end">
                               <div class="inner-top-right">
                                 <ul class="d-flex list-unstyled justify-content-end">
                                   <li>Cotton</li>
@@ -289,13 +289,13 @@ include("header.php");
                                   <li>Maize</li>
                                 </ul>
                               </div>
-                            </div>
+                            </div> -->
                           </div>
                           <div class="row">
                             <div class="col-xl-12">
                               <div class="card-body p-0">
                                 <div class="current-sale-container">
-                                  <div id="chart-currently"></div>
+                                  <div id="multic"></div>
                                 </div>
                               </div>
                             </div>
@@ -346,7 +346,7 @@ include("header.php");
                           </div>
                           <div class="col-xl-4 col-md-12 pr-0">
                             <div class="media p-0">
-                              <div class="media-left"><i class="icofont icofont-crop-plant"></i></div>
+                              <div class="media-left bg-success"><i class="icofont icofont-crop-plant"></i></div>
                               <div class="media-body">
                                 <h6>Maize Delivered</h6>
                                 <p><?php echo $total_maize_del; ?> </p>
@@ -980,6 +980,36 @@ $xhd = mysqli_fetch_array($lp_mre);
 $total_mre = $xhd["lp_mre"];
 
 $house_hold_get = $total_five_first.", ".$total_fort.", ".$total_hun.", ".$total_fou.", ".$total_fve.", ".$total_mre; 
+
+
+
+// VALUE OF DELIVERED CROP$
+
+$query_dev_cotton = mysqli_query($con, "SELECT SUM(MetricTonsCotton) cotton_value FROM `warehouse`");
+$qdc = mysqli_fetch_array($query_dev_cotton);
+$cotton_value = $qdc["cotton_value"];
+if ($cotton_value == "") {
+  $cotton_value = 0;
+}
+
+// Maize Value
+$query_dev_maize = mysqli_query($con, "SELECT SUM(MetricTonMaize) maize_value FROM `warehouse`");
+$qdm = mysqli_fetch_array($query_dev_maize);
+$maize_value = $qdm["maize_value"];
+if ($maize_value == "") {
+  $maize_value = 0;
+}
+
+// Maize Value
+$query_dev_rice = mysqli_query($con, "SELECT SUM(MerticTonRice) rice_value FROM `warehouse`");
+$qdr = mysqli_fetch_array($query_dev_rice);
+$rice_value = $qdr["rice_value"];
+if ($rice_value == "") {
+  $rice_value = 0;
+}
+
+$output_dev_value = $cotton_value.", ".$maize_value.", ".$rice_value;
+
 ?>
 <!-- 1. LOAN PROF -->
 <!-- EMD PHP QUERY -->
@@ -1185,6 +1215,157 @@ var crop_pie = new ApexCharts(
 );
 
 crop_pie.render();
+
+
+// MODE OF TRANSPORTATION RADAR CHAT
+// radar chart
+var modeoft = {
+    chart: {
+        height: 350,
+        type: 'radar',
+        toolbar:{
+          show: false
+        }
+    },
+    series: [{
+        name: 'Metric Tons',
+        data: [<?php echo $output_dev_value; ?>],
+    }],
+    labels: ['Cotton Tons', 'Maize Tons', 'Rice Tons'],
+    plotOptions: {
+        radar: {
+            size: 140,
+            polygons: {
+                strokeColor: '#e9e9e9',
+                fill: {
+                    colors: ['#f8f8f8', '#fff']
+                }
+            }
+        }
+    },
+    title: {
+        text: 'Tons of Delivered Crop'
+    },
+    colors: ['#FF4560'],
+    markers: {
+        size: 4,
+        colors: ['#fff'],
+        strokeColor: '#FF4560',
+        strokeWidth: 2,
+    },
+    tooltip: {
+        y: {
+            formatter: function(val) {
+                return val
+            }
+        }
+    },
+    yaxis: {
+        tickAmount: 7,
+        labels: {
+            formatter: function(val, i) {
+                if(i % 2 === 0) {
+                    return val
+                } else {
+                    return ''
+                }
+            }
+        }
+    },
+    colors:['#fd2e64']
+}
+
+var transm = new ApexCharts(
+    document.querySelector("#modet"),
+    modeoft
+);
+
+transm.render();
+
+
+// DASHBOARD VALUE
+// mixed chart
+var multicrop = {
+    chart: {
+        height: 350,
+        type: 'line',
+        stacked: false,
+        toolbar:{
+          show: false
+        }
+    },
+    stroke: {
+        width: [2, 2, 2],
+        curve: 'smooth'
+    },
+    plotOptions: {
+        bar: {
+            columnWidth: '50%'
+        }
+    },
+    series: [{
+        name: 'Cotton',
+        type: 'line',
+        data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+    }, {
+        name: 'Maize',
+        type: 'line',
+        data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+    }, {
+        name: 'Rice',
+        type: 'line',
+        data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+    }],
+    fill: {
+        opacity: [0.85,0.85,0.85],
+        gradient: {
+            inverseColors: false,
+            shade: 'light',
+            type: "vertical",
+            opacityFrom: 0.85,
+            opacityTo: 0.55,
+            stops: [0, 100, 100, 100]
+        }
+    },
+    labels: ['01/01/2003', '02/01/2003','03/01/2003','04/01/2003','05/01/2003','06/01/2003','07/01/2003','08/01/2003','09/01/2003','10/01/2003','11/01/2003'],
+    markers: {
+        size: 0
+    },
+    xaxis: {
+        type:'datetime'
+    },
+    yaxis: {
+        min: 0
+    },
+    tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+            formatter: function (y) {
+                if(typeof y !== "undefined") {
+                    return  y.toFixed(0) + " views";
+                }
+                return y;
+
+            }
+        }
+    },
+    legend: {
+        labels: {
+            useSeriesColors: true
+        },
+    },
+    colors:['#8869CF' , '#51bb25' , '#F73164' ]
+}
+
+var multich = new ApexCharts(
+    document.querySelector("#multic"),
+    multicrop
+);
+
+multich.render();
+
+
 </script>
 <!-- END -->
 <?php

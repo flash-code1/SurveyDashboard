@@ -60,8 +60,8 @@ include("header.php");
                 <div class="card">
                   <div class="card-header">
                     <h5>View Survey Details</h5><span>This page help you view all the information collected.</span>
-                    <!-- button to create -->
-                    
+                     <!-- button to create -->
+                     <button onclick="window.open ('export/farmer_export.php')" style="float: right;" class="btn btn-pill btn-success btn-air-warning btn-warning-gradien" type="button">Download</button>
                     <!-- end button -->
                   </div>
                   <div class="card-body">
