@@ -90,17 +90,14 @@ if (isset($_GET["id"])) {
                           <h5 class="m-0 f-18">Data Mananager Asst.: <b> <?php echo $row["NameOfDataManagementAssistant"]; ?> </b> </h5>
                           </div>
                     </div>
-                      </div>
-
-                      <div class="row">
-                      <div class="col-md-4">
+                    <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
                           <h5 class="m-0 f-18">Name of Ben.: <b> <?php echo $row["NameOfTheBeneficiary"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Name of Ben.: <b> <?php echo $row["NameOfTheBeneficiary"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Phone of Ben.: <b> <?php echo $row["PhoneOfBeneficiary"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
@@ -108,9 +105,6 @@ if (isset($_GET["id"])) {
                           <h5 class="m-0 f-18">Gender: <b> <?php echo $row["GENDER"]; ?> </b> </h5>
                           </div>
                     </div>
-                      </div>
-
-                      <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
                           <h5 class="m-0 f-18">Age Range: <b> <?php echo $row["AGERANGE"]; ?> </b> </h5>
@@ -126,9 +120,6 @@ if (isset($_GET["id"])) {
                           <h5 class="m-0 f-18">Education: <b> <?php echo $row["Education"]; ?> </b> </h5>
                           </div>
                     </div>
-                      </div>
-
-                      <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
                           <h5 class="m-0 f-18">Formal Education: <b> <?php echo $row["FORMALEDUCATION"]; ?> </b> </h5>
@@ -144,9 +135,6 @@ if (isset($_GET["id"])) {
                           <h5 class="m-0 f-18">Household Income Agric. Entrp.: <b> <?php echo $row["AgriculturalEnterprise"]; ?> </b> </h5>
                           </div>
                     </div>
-                      </div>
-
-                      <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
                           <h5 class="m-0 f-18">Household Income Other Entrp.: <b> <?php echo $row["OtherEnterprisesSources"]; ?> </b> </h5>
@@ -162,9 +150,6 @@ if (isset($_GET["id"])) {
                           <h5 class="m-0 f-18">FertilizerSpecialBlend: <b> NGN <?php echo $row["FertilizerSpecialBlendNairaValue"]." - ".$row["FertilizerSpecialBlendQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
-                      </div>
-
-                      <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
                           <h5 class="m-0 f-18">FertilizerNPK: <b> NGN <?php echo $row["FertilizerNPKNairaValue"]." - ".$row["FertilizerNPKQauntity"]; ?> </b> </h5>
@@ -268,7 +253,7 @@ if (isset($_GET["id"])) {
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">pre_season_GoodAgronomicPractices: <b> <?php echo $row["pre_season_GoodAgronomicPractices"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Traning_GoodAgronomicPractices: <b> <?php echo $row["Traning_GoodAgronomicPractices"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -276,34 +261,34 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">pre_season_FloodingBundingErosionControl: <b> <?php echo $row["pre_season_FloodingBundingErosionControl"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Traning_FloodingBundingErosionControl: <b> <?php echo $row["Traning_FloodingBundingErosionControl"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">pre_season_FarmRecords: <b> <?php echo $row["pre_season_FarmRecords"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Traning_FarmRecords: <b> <?php echo $row["Traning_FarmRecords"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">pre_season_GroupDynamicsTraining: <b> <?php echo $row["pre_season_GroupDynamicsTraining"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Traning_GroupDynamicsTraining: <b> <?php echo $row["Traning_GroupDynamicsTraining"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">pre_season_ControllingPostHarvestLosses: <b> <?php echo $row["pre_season_ControllingPostHarvestLosses"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Traning_ControllingPostHarvestLosses: <b> <?php echo $row["Traning_ControllingPostHarvestLosses"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">pre_season_CostBenefitAnalysis: <b> <?php echo $row["pre_season_CostBenefitAnalysis"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Traning_CostBenefitAnalysis: <b> <?php echo $row["Traning_CostBenefitAnalysis"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">pre_season_Other: <b> <?php echo $row["pre_season_Other"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Traning_Other: <b> <?php echo $row["Traning_Other"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -399,7 +384,7 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Extra Spent on Others: <b> <?php echo $row["OtherS_two"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Extra Spent on Others: <b> <?php echo $row["OtherSs"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
@@ -440,12 +425,12 @@ if (isset($_GET["id"])) {
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Havest Month: <b> <?php echo $row["MonthOfHarvest"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Havest Month: <b> <?php echo $row["MonthofHarvest"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Days Duration: <b> <?php echo $row["Days"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Days Duration: <b> <?php echo $row["Dayscompleteharvest"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -453,17 +438,17 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Harvest Employees: <b> <?php echo $row["People"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Harvest Employees: <b> <?php echo $row["People_employ"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Amount Spent on Harvest: NGN<?php echo number_format($row["much"], 2); ?> </b> </h5>
+                          <h5 class="m-0 f-18">Amount Spent on Harvest: NGN<?php echo number_format($row["muchspentharvest"], 2); ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Days Waited Processing Crops: <b> <?php echo $row["waited"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Days Waited Processing Crops: <b> <?php echo $row["DaysWaitedProcessingCrop"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -476,7 +461,7 @@ if (isset($_GET["id"])) {
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Number of 50KG bags: <b> <?php echo $row["estimate"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Number of 50KG bags: <b> <?php echo $row["estimate50kgharvest"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
@@ -507,7 +492,7 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">50kg bags delivered this season: <b> <?php echo $row["bags"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">50kg bags delivered this season: <b> <?php echo $row["bagsdeliveredseason"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
@@ -542,7 +527,7 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Satisfied with Management?: <b> <?php echo $row["manner"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Satisfied with Management?: <b> <?php echo $row["MannerAPBbeingManaged"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
@@ -551,13 +536,13 @@ if (isset($_GET["id"])) {
                           </div>
                     </div>
                       </div>
-                      <div class="row">
+                      <!-- <div class="row">
                       <div class="col-md-12">
                           <div class="shadow shadow-showcase p-25">
                           <h5 class="m-0 f-18">MAP</h5>
                           </div>
                     </div>
-                      </div>
+                      </div> -->
                   
                   </div>
                 </div>
