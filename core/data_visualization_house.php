@@ -61,7 +61,9 @@ include("header.php");
                   <div class="card-header">
                     <h5>View Warehouse Details</h5><span>This page help you view all the information collected.</span>
                     <!-- button to create -->
-                    
+                    <!-- button to create -->
+                    <a href="export/warehouse_export.php" style="float: right;" class="btn btn-pill btn-success btn-air-warning btn-warning-gradien">Download</a>
+                    <!-- end button -->
                     <!-- end button -->
                   </div>
                   <div class="card-body">
