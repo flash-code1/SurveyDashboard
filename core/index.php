@@ -845,6 +845,116 @@ if ($other_three == "") {
 }
 
 
+// END SURVERY DATA DATE
+
+
+// UPLOAD CURRENT FOR 
+// Data for planting data
+$current_date_w = date('Y/m/d');
+$last_date_w = date('Y/m/d', strtotime("-1 months", strtotime($current_date_w)));
+$two_date_w = date('Y/m/d', strtotime("-2 months", strtotime($current_date_w)));
+$three_date_w = date('Y/m/d', strtotime("-3 months", strtotime($current_date_w)));
+$final_date_w = date('Y/m/d', strtotime("-4 months", strtotime($current_date_w)));
+
+// Data description in Text\
+// $current_month = date('M', strtotime($current_date));
+// $last_month = date('M', strtotime($last_date));
+// $two_month = date('M', strtotime($two_date));
+// $three_month = date('M', strtotime($three_date));
+
+// query data
+
+
+// LAND CLEARING
+$select_cotton_current = mysqli_query($con, "SELECT SUM(valueCotton) as value_cotton FROM `warehouse` WHERE (SubmissionDate > '$last_date') AND (SubmissionDate <= '$current_date')");
+$qlc = mysqli_fetch_array($select_cotton_current);
+$value_cotton_current = $qlc["value_cotton"];
+if ($value_cotton_current == "") {
+  $value_cotton_current = 0;
+}
+// clearing data one moneth
+$select_cotton_last = mysqli_query($con, "SELECT SUM(valueCotton) as value_cotton FROM `warehouse` WHERE (SubmissionDate > '$two_date') AND (SubmissionDate <= '$last_date')");
+$qlcx = mysqli_fetch_array($select_cotton_last);
+$value_cotton_last = $qlcx["value_cotton"];
+if ($value_cotton_last == "") {
+  $value_cotton_last = 0;
+}
+// two month
+$select_cotton_two = mysqli_query($con, "SELECT SUM(valueCotton) as value_cotton FROM `warehouse` WHERE (SubmissionDate > '$three_date') AND (SubmissionDate <= '$two_date')");
+$qlcxx = mysqli_fetch_array($select_cotton_two);
+$value_cotton_two = $qlcxx["value_cotton"];
+if ($value_cotton_two == "") {
+  $value_cotton_two = 0;
+}
+// 4th month
+$select_cotton_three = mysqli_query($con, "SELECT SUM(valueCotton) as value_cotton FROM `warehouse` WHERE (SubmissionDate > '$final_date') AND (SubmissionDate <= '$three_date')");
+$qlcxxx = mysqli_fetch_array($select_cotton_three);
+$value_cotton_three = $qlcxxx["value_cotton"];
+if ($value_cotton_three == "") {
+  $value_cotton_three = 0;
+}
+
+
+// MAKING A DATA PUSH MAIZE
+$select_cotton_current = mysqli_query($con, "SELECT SUM(TotalValueMaize) as value_maize FROM `warehouse` WHERE (SubmissionDate > '$last_date') AND (SubmissionDate <= '$current_date')");
+$qlm = mysqli_fetch_array($select_cotton_current);
+$value_maize_current = $qlm["value_maize"];
+if ($value_maize_current == "") {
+  $value_maize_current = 0;
+}
+// clearing data one moneth
+$select_maize_last = mysqli_query($con, "SELECT SUM(TotalValueMaize) as value_maize FROM `warehouse` WHERE (SubmissionDate > '$two_date') AND (SubmissionDate <= '$last_date')");
+$qlmx = mysqli_fetch_array($select_maize_last);
+$value_maize_last = $qlmx["value_maize"];
+if ($value_maize_last == "") {
+  $value_maize_last = 0;
+}
+// two month
+$select_maize_two = mysqli_query($con, "SELECT SUM(TotalValueMaize) as value_maize FROM `warehouse` WHERE (SubmissionDate > '$three_date') AND (SubmissionDate <= '$two_date')");
+$qlmxx = mysqli_fetch_array($select_maize_two);
+$value_maize_two = $qlmxx["value_maize"];
+if ($value_maize_two == "") {
+  $value_maize_two = 0;
+}
+// 4th month
+$select_maize_three = mysqli_query($con, "SELECT SUM(TotalValueMaize) as value_maize FROM `warehouse` WHERE (SubmissionDate > '$final_date') AND (SubmissionDate <= '$three_date')");
+$qlmxxx = mysqli_fetch_array($select_maize_three);
+$value_maize_three = $qlmxxx["value_maize"];
+if ($value_maize_three == "") {
+  $value_maize_three = 0;
+}
+
+
+
+// RICE
+
+$select_rice_current = mysqli_query($con, "SELECT SUM(TotalValueRice) as value_rice FROM `warehouse` WHERE (SubmissionDate > '$last_date') AND (SubmissionDate <= '$current_date')");
+$qlr = mysqli_fetch_array($select_rice_current);
+$value_rice_current = $qlr["value_rice"];
+if ($value_rice_current == "") {
+  $value_rice_current = 0;
+}
+// clearing data one moneth
+$select_rice_last = mysqli_query($con, "SELECT SUM(TotalValueRice) as value_rice FROM `warehouse` WHERE (SubmissionDate > '$two_date') AND (SubmissionDate <= '$last_date')");
+$qlrx = mysqli_fetch_array($select_rice_last);
+$value_rice_last = $qlrx["value_rice"];
+if ($value_rice_last == "") {
+  $value_rice_last = 0;
+}
+// two month
+$select_rice_two = mysqli_query($con, "SELECT SUM(TotalValueRice) as value_rice FROM `warehouse` WHERE (SubmissionDate > '$three_date') AND (SubmissionDate <= '$two_date')");
+$qlrxx = mysqli_fetch_array($select_rice_two);
+$value_rice_two = $qlrxx["value_rice"];
+if ($value_rice_two == "") {
+  $value_rice_two = 0;
+}
+// 4th month
+$select_rice_three = mysqli_query($con, "SELECT SUM(TotalValueRice) as value_rice FROM `warehouse` WHERE (SubmissionDate > '$final_date') AND (SubmissionDate <= '$three_date')");
+$qlrxxx = mysqli_fetch_array($select_rice_three);
+$value_rice_three = $qlrxxx["value_rice"];
+if ($value_rice_three == "") {
+  $value_rice_three = 0;
+}
 // Done with Survey Data
 // State Interviewed Adamawa
 $lp_adam = mysqli_query($con, "SELECT 
@@ -1306,15 +1416,15 @@ var multicrop = {
     series: [{
         name: 'Cotton',
         type: 'line',
-        data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+        data: [<?php echo $value_cotton_three.", ".$value_cotton_two.", ".$value_cotton_last.", ".$value_cotton_current; ?>]
     }, {
         name: 'Maize',
         type: 'line',
-        data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+        data: [<?php echo $value_maize_three.", ".$value_maize_two.", ".$value_maize_last.", ".$value_maize_current; ?>]
     }, {
         name: 'Rice',
         type: 'line',
-        data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+        data: [<?php echo $value_rice_three.", ".$value_rice_two.", ".$value_rice_last.", ".$value_rice_current; ?>]
     }],
     fill: {
         opacity: [0.85,0.85,0.85],
@@ -1327,7 +1437,7 @@ var multicrop = {
             stops: [0, 100, 100, 100]
         }
     },
-    labels: ['01/01/2003', '02/01/2003','03/01/2003','04/01/2003','05/01/2003','06/01/2003','07/01/2003','08/01/2003','09/01/2003','10/01/2003','11/01/2003'],
+    labels: ['<?php echo $three_date_w ?>', '<?php echo $two_date_w ?>','<?php echo $last_date_w ?>','<?php echo $current_date_w ?>'],
     markers: {
         size: 0
     },
@@ -1343,7 +1453,7 @@ var multicrop = {
         y: {
             formatter: function (y) {
                 if(typeof y !== "undefined") {
-                    return  y.toFixed(0) + " views";
+                    return  y.toFixed(0) + " NGN";
                 }
                 return y;
 
