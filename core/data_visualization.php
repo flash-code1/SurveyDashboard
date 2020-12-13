@@ -72,7 +72,7 @@ include("header.php");
                             <th>Date</th>
                             <th>State</th>
                             <th>Community</th>
-                            <th>Data Management Asst.</th>
+                            <th>Name</th>
                             <th>Phone</th>
                             <th>Gender</th>
                             <th>Age range</th>
@@ -106,7 +106,7 @@ include("header.php");
                     { data: 'SubmissionDate' },
                     { data: 'StateInterview' },
                     { data: 'clusterCommunity' },
-                    { data: 'NameOfDataManagementAssistant' },
+                    { data: 'EMUMERATORNAME' },
                     { data: 'PhoneOfBeneficiary' },
                     { data: 'GENDER' },
                     { data: 'AGERANGE' },
