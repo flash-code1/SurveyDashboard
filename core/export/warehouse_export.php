@@ -1,4 +1,14 @@
 <?php
+if (isset($_POST["state"])) {
+	$state = $_POST["state"];
+	if ($_POST["state"] != "all") {
+		$Condition = "WHERE StateHeadquarter = '$state'";
+	} else {
+		$Condition = "";
+	}
+} else {
+	$Condition = "";
+}
 	header("Content-Type: application/xls");
 	header("Content-Disposition: attachment; filename=warehousedata.xls");
 	header("Pragma: no-cache");
@@ -34,7 +44,7 @@
 				</tr><br />
 			<tbody><br />
 	";
-	$query = $con->query("SELECT * FROM `warehouse`");
+	$query = $con->query("SELECT * FROM `warehouse` $Condition");
 	while($row = $query->fetch_array()){
 	$output .= "<br />
 				<tr><br />

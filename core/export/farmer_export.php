@@ -1,4 +1,14 @@
 <?php
+if (isset($_POST["state"])) {
+	$state = $_POST["state"];
+	if ($_POST["state"] != "all") {
+		$Condition = "WHERE StateInterview = '$state'";
+	} else {
+		$Condition = "";
+	}
+} else {
+	$Condition = "";
+}
 	header("Content-Type: application/xls");
 	header("Content-Disposition: attachment; filename=farmersdata.xls");
 	header("Pragma: no-cache");
@@ -44,7 +54,7 @@
 				</tr><br />
 			<tbody><br />
 	";
-	$query = $con->query("SELECT * FROM `survey_data`");
+	$query = $con->query("SELECT * FROM `survey_data` $Condition");
 	while($row = $query->fetch_array()){
 	$output .= "<br />
 				<tr><br />
