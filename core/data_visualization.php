@@ -66,7 +66,7 @@ include("header.php");
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
-                      <table id="empTable" class="display nowrap dataTable">
+                      <table id="Farmers" class="display nowrap dataTable">
                         <thead>
                           <tr>
                             <th>Date</th>
@@ -95,7 +95,7 @@ include("header.php");
                     </div>
                     <script>
         $(document).ready(function(){
-            $('#empTable').DataTable({
+            $('#Farmers').DataTable({
                 'processing': true,
                 'serverSide': true,
                 'serverMethod': 'post',

@@ -38,15 +38,15 @@ $data = array();
 while ($row = mysqli_fetch_assoc($empRecords)) {
 	$id = $row["id"];
     $data[] = array(
-    		"SubmissionDate"=>$row['SubmissionDate'],
-    		"StateInterview"=>$row['StateInterview'],
-    		"clusterCommunity"=>$row['clusterCommunity'],
-    		"EMUMERATORNAME"=>$row['EMUMERATORNAME'],
-    		"PhoneOfBeneficiary"=>$row['PhoneOfBeneficiary'],
-    		"GENDER"=>$row['GENDER'],
-    		"AGERANGE"=>$row['AGERANGE'],
-    		"CropGrown"=>$row['CropGrown'],
-    		"AgriculturalEnterprise"=>$row['AgriculturalEnterprise'],
+    		"SubmissionDate"=>preg_replace('/[^a-zA-Z0-9 .-]/','', $row['SubmissionDate']),
+    		"StateInterview"=>preg_replace('/[^a-zA-Z0-9 .-]/','', $row['StateInterview']),
+    		"clusterCommunity"=>preg_replace('/[^a-zA-Z0-9 .-]/','', $row['clusterCommunity']),
+    		"EMUMERATORNAME"=>preg_replace('/[^a-zA-Z0-9 .-]/','', $row['EMUMERATORNAME']),
+    		"PhoneOfBeneficiary"=>preg_replace('/[^a-zA-Z0-9 .-]/','', $row['PhoneOfBeneficiary']),
+    		"GENDER"=>preg_replace('/[^a-zA-Z0-9 .-]/','', $row['GENDER']),
+    		"AGERANGE"=>preg_replace('/[^a-zA-Z0-9 .-]/','', $row['AGERANGE']),
+    		"CropGrown"=>preg_replace('/[^a-zA-Z0-9 .-]/','', $row['CropGrown']),
+    		"AgriculturalEnterprise"=> preg_replace('/[^a-zA-Z0-9 .-]/','', $row['AgriculturalEnterprise']),
     		"close"=>"<a href='data_single.php?id=$id' class='btn btn-pill btn-success btn-air-success btn-success-gradien' type='button'>View More</a>"
     	);
 }
