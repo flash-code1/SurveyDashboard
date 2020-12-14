@@ -17,7 +17,7 @@ if($searchValue != '') {
   SubmissionDate like '%".$searchValue."%' or clusterCommunity like '%".$searchValue."%' or 
   EMUMERATORNAME like'%".$searchValue."%' or PhoneOfBeneficiary like'%".$searchValue."%' or 
   GENDER like'%".$searchValue."%' or AGERANGE like'%".$searchValue."%'
-  or Funding like'%".$searchValue."%') ";
+  or Funding like'%".$searchValue."%' or StateInterview like '%".$searchValue."%') ";
 }
 
 ## Total number of records without filtering
