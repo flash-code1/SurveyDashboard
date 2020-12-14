@@ -170,17 +170,17 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Pesticides: <b> GN <?php echo $row["PesticidesNairaValue"]." - ".$row["PesticidesQauntity"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Pesticides: <b> NGN <?php echo number_format($row["PesticidesNairaValue"], 2)." - ".$row["PesticidesQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">MicroNutrient: <b> NGN <?php echo $row["MicronutrientNairaValue"]." - ".$row["MicronutrientQauntity"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">MicroNutrient: <b> NGN <?php echo number_format($row["MicronutrientNairaValue"], 2)." - ".$row["MicronutrientQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">CertifiedSeedPerKg: <b> NGN <?php echo $row["CertifiedSeedPerKgtNairaValue"]." - ".$row["CertifiedSeedPerKgQauntity"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">CertifiedSeedPerKg: <b> NGN <?php echo number_format($row["CertifiedSeedPerKgtNairaValue"], 2)." - ".$row["CertifiedSeedPerKgQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -188,12 +188,12 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">KnapsackSprayer: <b> NGN <?php echo $row["KnapsackSprayerNairaValue"]." - ".$row["KnapsackSprayerQauntity"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">KnapsackSprayer: <b> NGN <?php echo number_format($row["KnapsackSprayerNairaValue"], 2)." - ".$row["KnapsackSprayerQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">WaterPump: <b> NGN <?php echo $row["WaterPumpNairaValue"]." - ".$row["WaterPumpQauntity"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">WaterPump: <b> NGN <?php echo number_format($row["WaterPumpNairaValue"], 2)." - ".$row["WaterPumpQauntity"]; ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -322,7 +322,7 @@ if (isset($_GET["id"])) {
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Spent on Land Clearing: <b> <?php echo $row["LandClearing"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Spent on Land Clearing: <b> <?php echo number_format($row["LandClearing"], 2); ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -330,17 +330,17 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Spent on Harrowing: <b> <?php echo $row["Harrowing"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Spent on Harrowing: <b> <?php echo number_format($row["Harrowing"], 2); ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Spent on Planting: <b> <?php echo $row["Planting"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Spent on Planting: <b> <?php echo number_format($row["Planting"], 2); ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Spent on Others: <b> <?php echo $row["ActivitiesOther"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Spent on Others: <b> <?php echo number_format($row["ActivitiesOther"], 2); ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -348,17 +348,17 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Extra Spent on Seed: <b> <?php echo $row["Seed"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Extra Spent on Seed: <b> <?php echo number_format($row["Seed"], 2); ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Extra Spent on Fertilizer(NPK): <b> <?php echo $row["Fertilizer"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Extra Spent on Fertilizer(NPK): <b> <?php echo number_format($row["Fertilizer"], 2); ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Extra Spent on Urea: <b> <?php echo $row["Urea"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Extra Spent on Urea: <b> <?php echo number_format($row["Urea"], 2); ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -366,17 +366,17 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Extra Spent on Herbicide: <b> <?php echo $row["Herbicide"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Extra Spent on Herbicide: <b> <?php echo number_format($row["Herbicide"], 2); ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Extra Spent on Pesticides: <b> <?php echo $row["Pesticides"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Extra Spent on Pesticides: <b> <?php echo number_format($row["Pesticides"], 2); ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Extra Spent on Labour: <b> <?php echo $row["Labour"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Extra Spent on Labour: <b> <?php echo number_format($row["Labour"], 2); ?> </b> </h5>
                           </div>
                     </div>
                       </div>
@@ -384,7 +384,7 @@ if (isset($_GET["id"])) {
                       <div class="row">
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Extra Spent on Others: <b> <?php echo $row["OtherSs"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Extra Spent on Others: <b> <?php echo number_format($row["OtherSs"], 2); ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
