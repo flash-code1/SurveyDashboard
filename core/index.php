@@ -76,7 +76,7 @@ include("header.php");
                     $mmf = mysqli_fetch_array($farmers);
                     $total_farmers = number_format($mmf["all_farm"]);
 
-                    $percent = ($mmf["all_farm"]/150000) * 100;
+                    $percent = ($mmf["all_farm"]/218000) * 100;
                     $percent = round($percent);
         
                     ?>
@@ -106,12 +106,12 @@ include("header.php");
                     $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/350) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                     ?>
                             <div class="card">
                   <div class="card-header">
-                    <h5> <a href="data_visualization_house.php"> <?php echo $total_house; ?> / 150 Active Est. Warehouse </a></h5><span> <b> Total Ware House </b> </span>
+                    <h5> <a href="data_visualization_house.php"> <?php echo $total_house; ?> / 60 Active Est. Warehouse </a></h5><span> <b> Total Ware House </b> </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
