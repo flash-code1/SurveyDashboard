@@ -80,7 +80,7 @@ include("header.php");
                     $percent = round($percent);
         
                     ?>
-                    <h5> <a href="data_visualization.php"> <?php echo $total_farmers;?> / 150,000 est. </a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="data_visualization.php"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -111,7 +111,7 @@ include("header.php");
                     ?>
                             <div class="card">
                   <div class="card-header">
-                    <h5> <a href="data_visualization_house.php"> <?php echo $total_house; ?> / 350 Est. </a></h5><span> <b> Total Ware House </b> </span>
+                    <h5> <a href="data_visualization_house.php"> <?php echo $total_house; ?> / 150 Active Est. Warehouse </a></h5><span> <b> Total Ware House </b> </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
