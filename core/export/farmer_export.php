@@ -1,15 +1,22 @@
 <?php
+session_start();
+if (isset($_SESSION["MyConF"])) {
+	$get_me = $_SESSION["MyConF"];
+} else {
+$get_me = "";
+}
 if (isset($_GET["state"])) {
 	$state = $_GET["state"];
 	if ($_GET["state"] != "all") {
-		$Condition = "WHERE StateInterview = '$state'";
+		$Condition = "WHERE StateInterview = '$state' $get_me";
 	} else {
-		$Condition = "";
+		$Condition = "WHERE 1 $get_me";
 	}
 } else {
-	$Condition = "";
+	$Condition = "WHERE 1 $get_me";
 	$state = "All_State";
 }
+
 	header("Content-Type: application/xls");
 	header("Content-Disposition: attachment; filename=farmers_data_$state.xls");
 	header("Pragma: no-cache");

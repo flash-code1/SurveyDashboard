@@ -1,6 +1,9 @@
 <?php
 include('config.php');
 ## Merge
+session_start();
+
+$_SESSION["MyConW"] = "";
 ## Read value
 $draw = $_POST['draw'];
 $row = $_POST['start'];
@@ -16,6 +19,9 @@ if($searchValue != '') {
 	$searchQuery = " and (SubmissionDate like '%".$searchValue."%' or 
 	EnumeratorName like'%".$searchValue."%' or Ward like'%".$searchValue."%' or 
 	Crops like'%".$searchValue."%' or StateHeadquarter like'%".$searchValue."%') ";
+	$_SESSION["MyConW"] = $searchQuery;
+}  else {
+	$_SESSION["MyConW"] = "";
 }
 
 ## Total number of records without filtering

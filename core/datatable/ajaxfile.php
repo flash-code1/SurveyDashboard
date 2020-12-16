@@ -1,6 +1,9 @@
 <?php
 include 'config.php';
 ## Merge
+session_start();
+
+$_SESSION["MyConF"] = "";
 ## Read value
 $draw = $_POST['draw'];
 $row = $_POST['start'];
@@ -18,6 +21,10 @@ if($searchValue != '') {
   EMUMERATORNAME like'%".$searchValue."%' or PhoneOfBeneficiary like'%".$searchValue."%' or 
   GENDER like'%".$searchValue."%' or AGERANGE like'%".$searchValue."%'
   or Funding like'%".$searchValue."%' or StateInterview like '%".$searchValue."%') ";
+  $_SESSION["MyConF"] = $searchQuery;
+
+} else {
+	$_SESSION["MyConF"] = "";
 }
 
 ## Total number of records without filtering

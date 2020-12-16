@@ -1,13 +1,19 @@
 <?php
+session_start();
+if (isset($_SESSION["MyConW"])) {
+	$get_me = $_SESSION["MyConW"];
+} else {
+$get_me = "";
+}
 if (isset($_GET["state"])) {
 	$state = $_GET["state"];
 	if ($_GET["state"] != "all") {
-		$Condition = "WHERE StateHeadquarter = '$state'";
+		$Condition = "WHERE StateHeadquarter = '$state' $get_me";
 	} else {
-		$Condition = "";
+		$Condition = "WHERE 1 $get_me";
 	}
 } else {
-	$Condition = "";
+	$Condition = "WHERE 1 $get_me";
 	$state = "All_State";
 }
 	header("Content-Type: application/xls");
