@@ -63,7 +63,7 @@ include("header.php");
                      <!-- button to create -->
                       <!-- button to create -->
                     <div style="float: right;">
-                    <form action="export/farmer_export.php" method="post">
+                    <form action="export/farmer_export.php" method="GET">
                       <div class="row">
                         <div class="col-md-6">
                         <select name="state" id="" class="form-control">
@@ -71,7 +71,7 @@ include("header.php");
               <option value="Abuja FCT">Abuja FCT</option>
               <option value="Abia">Abia</option>
               <option value="Adamawa">Adamawa</option>
-              <option value="Akwa Ibom">Akwa Ibom</option>
+              <option value="AkwaIbom">Akwa Ibom</option>
               <option value="Anambra">Anambra</option>
               <option value="Bauchi">Bauchi</option>
               <option value="Bayelsa">Bayelsa</option>
@@ -82,6 +82,7 @@ include("header.php");
               <option value="Ebonyi">Ebonyi</option>
               <option value="Edo">Edo</option>
               <option value="Ekiti">Ekiti</option>
+
               <option value="Enugu">Enugu</option>
               <option value="Gombe">Gombe</option>
               <option value="Imo">Imo</option>

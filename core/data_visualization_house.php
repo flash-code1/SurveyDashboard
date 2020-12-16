@@ -63,7 +63,7 @@ include("header.php");
                     <!-- button to create -->
                     <!-- button to create -->
                     <div style="float: right;">
-                    <form action="export/warehouse_export.php" method="post">
+                    <form action="export/warehouse_export.php" method="GET">
                       <div class="row">
                         <div class="col-md-6">
                         <select name="state" id="" class="form-control">

@@ -80,7 +80,7 @@ include("header.php");
                     $percent = round($percent);
         
                     ?>
-                    <h5> <a href="data_visualization.php"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="state_sorting_farmer.php"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -111,7 +111,7 @@ include("header.php");
                     ?>
                             <div class="card">
                   <div class="card-header">
-                    <h5> <a href="data_visualization_house.php"> <?php echo $total_house; ?> / 60 Active Est. Warehouse </a></h5><span> <b> Total Ware House </b> </span>
+                    <h5> <a href="state_sorting_warehouse.php"> <?php echo $total_house; ?> / 60 Active Est. Warehouse </a></h5><span> <b> Total Ware House </b> </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -145,7 +145,7 @@ include("header.php");
                 </div>
               </div>
               <!-- ok -->
-            <div class="col-sm-12 col-xl-6 box-col-6">
+            <div class="col-sm-12 col-xl-12 box-col-6">
                 <div class="card">
                   <div class="card-header">
                     <h5>Loan profile</h5>
@@ -165,16 +165,7 @@ include("header.php");
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-xl-6 box-col-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5>State Interviewed </h5>
-                  </div>
-                  <div class="card-body apex-chart">
-                    <div id="state_int"></div>
-                  </div>
-                </div>
-              </div>
+              
               <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card">
                   <div class="card-header">
@@ -202,6 +193,16 @@ include("header.php");
                   </div>
                   <div class="card-body">
                     <div id="modet"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-12 box-col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>State Interviewed </h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="state_int"></div>
                   </div>
                 </div>
               </div>
@@ -520,9 +521,11 @@ function initMap() {
       while ($row = mysqli_fetch_array($query_two_coordinate)) {
         $lat = $row["CurrentLocationLatitude"];
         $lng = $row["CurrentLocationLongitude"];
+        $state_name = $row["StateHeadquarter"];
+        $lga_name = $row["AbiLGa"];
         $image_type = "".'"library"'."";
         // echo $lat.$image_type;
-        $frameit = "{ position: new google.maps.LatLng($lat, $lng), type: $image_type }, ";
+        $frameit = "{ position: new google.maps.LatLng($lat, $lng), type: $image_type, text_name : '$state_name', lga: '$lga_name' }, ";
         echo $frameit;
     ?>
     <?php
@@ -533,19 +536,46 @@ function initMap() {
 
   // Create markers.
   for (let i = 0; i < features.length; i++) {
+        const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">'+ features[i].text_name +'</h1>' +
+    '<div id="bodyContent">' +
+    "<p><b>LGA:</b>, "+ features[i].lga +
+    "</div>" +
+    "</div>";
+    
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
     const marker = new google.maps.Marker({
       position: features[i].position,
       icon: icons[features[i].type].icon,
       map: map,
+      title: "Warehouse Name",
     });
+
+    marker.addListener("mouseover", () => {
+    infowindow.open(map, marker);
+  });
   }
+
+  // here marker will now get the HOVER AND CLICK DETAILS
+  
+  // const marker = new google.maps.Marker({
+  //   position: ,
+  //   map,
+    
+  // });
+ 
 }
 
                   </script>
                 </div>
               </div>
               
-              <div class="col-sm-12 col-xl-6 box-col-6">
+              <div class="col-sm-12 col-xl-12 box-col-12">
                 <div class="card o-hidden profile-greeting">
                   <div class="card-body">
                     <div class="media">
@@ -558,7 +588,7 @@ function initMap() {
                       <div class="profile-vector"><img class="img-fluid" src="../assets/images/dashboard/welcome.png" alt=""></div>
                       <h4 class="f-w-600"><span id="greeting">Good Morning</span> <span></span> <span class="right-circle"><i class="fa fa-check-circle f-14 middle"></i></span></h4>
                       <p><span> Check the time.</span></p>
-                      <div class="whatsnew-btn"><a class="btn btn-primary">Data Virtualization</a></div>
+                      <div class="whatsnew-btn"><a href="state_sorting_farmer.php" class="btn btn-primary">Data Virtualization</a></div>
                       <div class="left-icon"><i class="fa fa-bell"> </i></div>
                     </div>
                   </div>
@@ -851,11 +881,17 @@ if ($other_three == "") {
 // UPLOAD CURRENT FOR 
 // Data for planting data
 $current_date_w = date('Y/m/d');
-$last_date_w = date('Y/m/d', strtotime("-1 months", strtotime($current_date_w)));
-$two_date_w = date('Y/m/d', strtotime("-2 months", strtotime($current_date_w)));
-$three_date_w = date('Y/m/d', strtotime("-3 months", strtotime($current_date_w)));
-$final_date_w = date('Y/m/d', strtotime("-4 months", strtotime($current_date_w)));
+$current_date_W = date('Y/m/d', strtotime("+1 months", strtotime($current_date_w)));
+$last_date_w = date('Y/m/d');
+$two_date_w = date('Y/m/d', strtotime("-1 months", strtotime($current_date_w)));
+$three_date_w = date('Y/m/d', strtotime("-2 months", strtotime($current_date_w)));
+$final_date_w = date('Y/m/d', strtotime("-3 months", strtotime($current_date_w)));
 
+$current_date = date('Y-m-d', strtotime("+1 months", strtotime($current_date_w)));
+$last_date = date('Y/m/d');
+$two_date = date('Y-m-d', strtotime("-1 months", strtotime($current_date)));
+$three_date = date('Y-m-d', strtotime("-2 months", strtotime($current_date)));
+$final_date = date('Y-m-d', strtotime("-3 months", strtotime($current_date)));
 // Data description in Text\
 // $current_month = date('M', strtotime($current_date));
 // $last_month = date('M', strtotime($last_date));
@@ -956,6 +992,8 @@ if ($value_rice_three == "") {
   $value_rice_three = 0;
 }
 // Done with Survey Data
+
+
 // State Interviewed Adamawa
 $lp_adam = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_adam
@@ -963,6 +1001,69 @@ FROM
 `survey_data` WHERE StateInterview = 'Adamawa'");
 $lad = mysqli_fetch_array($lp_adam);
 $total_adam = $lad["lp_adam"];
+// Akwa Ibom
+$lp_AkwaIbom = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_AkwaIbom
+FROM
+`survey_data` WHERE StateInterview = 'AkwaIbom'");
+$ladAkwaIbom = mysqli_fetch_array($lp_AkwaIbom);
+$total_AkwaIbom = $ladAkwaIbom["lp_AkwaIbom"];
+
+// Bauchi
+$lp_Bauchi = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Bauchi
+FROM
+`survey_data` WHERE StateInterview = 'Bauchi'");
+$ladBauchi = mysqli_fetch_array($lp_Bauchi);
+$total_Bauchi = $ladBauchi["lp_Bauchi"];
+
+// Delta
+$lp_Delta = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Delta
+FROM
+`survey_data` WHERE StateInterview = 'Delta'");
+$ladDelta = mysqli_fetch_array($lp_Delta);
+$total_Delta = $ladDelta["lp_Delta"];
+
+// Bayelsa
+$lp_Bayelsa = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Bayelsa
+FROM
+`survey_data` WHERE StateInterview = 'Bayelsa'");
+$ladBayelsa = mysqli_fetch_array($lp_Bayelsa);
+$total_Bayelsa = $ladBayelsa["lp_Bayelsa"];
+
+// CrossRiver
+$lp_CrossRiver = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_CrossRiver
+FROM
+`survey_data` WHERE StateInterview = 'CrossRiver'");
+$ladCrossRiver = mysqli_fetch_array($lp_CrossRiver);
+$total_CrossRiver = $ladCrossRiver["lp_CrossRiver"];
+
+// Ebonyi
+$lp_Ebonyi = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Ebonyi
+FROM
+`survey_data` WHERE StateInterview = 'Ebonyi'");
+$ladEbonyi = mysqli_fetch_array($lp_Ebonyi);
+$total_Ebonyi = $ladEbonyi["lp_Ebonyi"];
+
+// Lagos
+$lp_Lagos = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Lagos
+FROM
+`survey_data` WHERE StateInterview = 'Lagos'");
+$ladLagos = mysqli_fetch_array($lp_Lagos);
+$total_Lagos = $ladLagos["lp_Lagos"];
+
+// Oyo
+$lp_Oyo = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Oyo
+FROM
+`survey_data` WHERE StateInterview = 'Oyo'");
+$ladOyo = mysqli_fetch_array($lp_Oyo);
+$total_Oyo = $ladOyo["lp_Oyo"];
 // State Interviewd Gombe
 $lp_gombe = mysqli_query($con, "SELECT 
 COUNT(*) AS lp_gombe
@@ -1001,7 +1102,7 @@ $total_taraba = $ltr["lp_taraba"];
 // $total_anambra = $ltv["lp_bra"];
 
 
-$state_intv = $total_adam.", ".$total_gombe.", ".$total_yobe.", ".$total_borno.", ".$total_taraba;
+$state_intv = $total_adam.", ".$total_AkwaIbom.", ".$total_Bauchi.", ".$total_Delta.", ".$total_Bayelsa.", ".$total_CrossRiver.", ".$total_Ebonyi.", ".$total_gombe.", ".$total_yobe.", ".$total_borno.", ".$total_taraba.", ".$total_Lagos.", ".$total_Oyo;
 
 
 
@@ -1285,7 +1386,7 @@ var state_int = {
         data: [<?php echo $state_intv ?>]
     }],
     xaxis: {
-        categories: ['Adamawa', 'Gombe', 'Yobe', 'Borno', 'Taraba'],
+        categories: ['Adamawa', 'Akwa Ibom', 'Bauchi', 'Delta', 'Bayelsa', 'Cross River', 'Ebonyi', 'Gombe', 'Yobe', 'Borno', 'Taraba', 'Lagos', 'Oyo'],
     }
 }
 

@@ -1,16 +1,17 @@
 <?php
-if (isset($_POST["state"])) {
-	$state = $_POST["state"];
-	if ($_POST["state"] != "all") {
+if (isset($_GET["state"])) {
+	$state = $_GET["state"];
+	if ($_GET["state"] != "all") {
 		$Condition = "WHERE StateInterview = '$state'";
 	} else {
 		$Condition = "";
 	}
 } else {
 	$Condition = "";
+	$state = "All_State";
 }
 	header("Content-Type: application/xls");
-	header("Content-Disposition: attachment; filename=farmersdata.xls");
+	header("Content-Disposition: attachment; filename=farmers_data_$state.xls");
 	header("Pragma: no-cache");
 	header("Expires: 0");
     require('../datatable/config.php');
