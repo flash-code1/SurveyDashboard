@@ -1093,6 +1093,173 @@ FROM
 $ltr = mysqli_fetch_array($lp_taraba);
 $total_taraba = $ltr["lp_taraba"];
 
+$lp_Abuja = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Abuja
+FROM
+`survey_data` WHERE StateInterview = 'Abuja'");
+$ltrAbuja = mysqli_fetch_array($lp_Abuja);
+$total_Abuja = $ltrAbuja["lp_Abuja"];
+
+$lp_Abia = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Abia
+FROM
+`survey_data` WHERE StateInterview = 'Abia'");
+$ltrAbia = mysqli_fetch_array($lp_Abia);
+$total_Abia = $ltrAbia["lp_Abia"];
+
+$lp_Anambra = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Anambra
+FROM
+`survey_data` WHERE StateInterview = 'Anambra'");
+$ltrAnambra = mysqli_fetch_array($lp_Anambra);
+$total_Anambra = $ltrAnambra["lp_Anambra"];
+
+$lp_Benue = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Benue
+FROM
+`survey_data` WHERE StateInterview = 'Benue'");
+$ltrBenue = mysqli_fetch_array($lp_Benue);
+$total_Benue = $ltrBenue["lp_Benue"];
+
+$lp_Edo = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Edo
+FROM
+`survey_data` WHERE StateInterview = 'Edo'");
+$ltrEdo = mysqli_fetch_array($lp_Edo);
+$total_Edo = $ltrEdo["lp_Edo"];
+
+$lp_Ekiti = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Ekiti
+FROM
+`survey_data` WHERE StateInterview = 'Ekiti'");
+$ltrEkiti = mysqli_fetch_array($lp_Ekiti);
+$total_Ekiti = $ltrEkiti["lp_Ekiti"];
+
+$lp_Enugu = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Enugu
+FROM
+`survey_data` WHERE StateInterview = 'Enugu'");
+$ltrEnugu = mysqli_fetch_array($lp_Enugu);
+$total_Enugu = $ltrEnugu["lp_Enugu"];
+
+$lp_Imo = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Imo
+FROM
+`survey_data` WHERE StateInterview = 'Imo'");
+$ltrImo = mysqli_fetch_array($lp_Imo);
+$total_Imo = $ltrImo["lp_Imo"];
+
+$lp_Jigawa = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Jigawa
+FROM
+`survey_data` WHERE StateInterview = 'Jigawa'");
+$ltrJigawa = mysqli_fetch_array($lp_Jigawa);
+$total_Jigawa = $ltrJigawa["lp_Jigawa"];
+
+$lp_Kaduna = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Kaduna
+FROM
+`survey_data` WHERE StateInterview = 'Kaduna'");
+$ltrKaduna = mysqli_fetch_array($lp_Kaduna);
+$total_Kaduna = $ltrKaduna["lp_Kaduna"];
+
+$lp_Kano = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Kano
+FROM
+`survey_data` WHERE StateInterview = 'Kano'");
+$ltrKano = mysqli_fetch_array($lp_Kano);
+$total_Kano = $ltrKano["lp_Kano"];
+
+$lp_Katsina = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Katsina
+FROM
+`survey_data` WHERE StateInterview = 'Katsina'");
+$ltrKatsina = mysqli_fetch_array($lp_Katsina);
+$total_Katsina = $ltrKatsina["lp_Katsina"];
+
+$lp_Kebbi = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Kebbi
+FROM
+`survey_data` WHERE StateInterview = 'Kebbi'");
+$ltrKebbi = mysqli_fetch_array($lp_Kebbi);
+$total_Kebbi = $ltrKebbi["lp_Kebbi"];
+
+$lp_Kogi = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Kogi
+FROM
+`survey_data` WHERE StateInterview = 'Kogi'");
+$ltrKogi = mysqli_fetch_array($lp_Kogi);
+$total_Kogi = $ltrKogi["lp_Kogi"];
+
+$lp_Kwara = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Kwara
+FROM
+`survey_data` WHERE StateInterview = 'Kwara'");
+$ltrKwara = mysqli_fetch_array($lp_Kwara);
+$total_Kwara = $ltrKwara["lp_Kwara"];
+
+$lp_Nassarawa = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Nassarawa
+FROM
+`survey_data` WHERE StateInterview = 'Nassarawa'");
+$ltrNassarawa = mysqli_fetch_array($lp_Nassarawa);
+$total_Nassarawa = $ltrNassarawa["lp_Nassarawa"];
+
+$lp_Niger = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Niger
+FROM
+`survey_data` WHERE StateInterview = 'Niger'");
+$ltrNiger = mysqli_fetch_array($lp_Niger);
+$total_Niger = $ltrNiger["lp_Niger"];
+
+$lp_Ogun = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Ogun
+FROM
+`survey_data` WHERE StateInterview = 'Ogun'");
+$ltrOgun = mysqli_fetch_array($lp_Ogun);
+$total_Ogun = $ltrOgun["lp_Ogun"];
+
+$lp_Ondo = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Ondo
+FROM
+`survey_data` WHERE StateInterview = 'Ondo'");
+$ltrOndo = mysqli_fetch_array($lp_Ondo);
+$total_Ondo = $ltrOndo["lp_Ondo"];
+
+$lp_Osun = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Osun
+FROM
+`survey_data` WHERE StateInterview = 'Osun'");
+$ltrOsun = mysqli_fetch_array($lp_Osun);
+$total_Osun = $ltrOsun["lp_Osun"];
+
+$lp_Plateau = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Plateau
+FROM
+`survey_data` WHERE StateInterview = 'Plateau'");
+$ltrPlateau = mysqli_fetch_array($lp_Plateau);
+$total_Plateau = $ltrPlateau["lp_Plateau"];
+
+$lp_Rivers = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Rivers
+FROM
+`survey_data` WHERE StateInterview = 'Rivers'");
+$ltrRivers = mysqli_fetch_array($lp_Rivers);
+$total_Rivers = $ltrRivers["lp_Rivers"];
+
+$lp_Sokoto = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Sokoto
+FROM
+`survey_data` WHERE StateInterview = 'Sokoto'");
+$ltrSokoto = mysqli_fetch_array($lp_Sokoto);
+$total_Sokoto = $ltrSokoto["lp_Sokoto"];
+
+$lp_Zamfara = mysqli_query($con, "SELECT 
+COUNT(*) AS lp_Zamfara
+FROM
+`survey_data` WHERE StateInterview = 'Zamfara'");
+$ltrZamfara = mysqli_fetch_array($lp_Zamfara);
+$total_Zamfara = $ltrZamfara["lp_Zamfara"];
 // Anambra
 // $lp_bra = mysqli_query($con, "SELECT 
 // COUNT(*) AS lp_bra
@@ -1102,7 +1269,16 @@ $total_taraba = $ltr["lp_taraba"];
 // $total_anambra = $ltv["lp_bra"];
 
 
-$state_intv = $total_adam.", ".$total_AkwaIbom.", ".$total_Bauchi.", ".$total_Delta.", ".$total_Bayelsa.", ".$total_CrossRiver.", ".$total_Ebonyi.", ".$total_gombe.", ".$total_yobe.", ".$total_borno.", ".$total_taraba.", ".$total_Lagos.", ".$total_Oyo;
+$state_intv = $total_adam.", ".$total_AkwaIbom.", ".$total_Bauchi.", ".$total_Delta.", ".$total_Bayelsa.", ".$total_CrossRiver.", ".$total_Ebonyi.", ".$total_gombe.", ".$total_yobe.", ".$total_borno.", ".$total_taraba.", ".$total_Lagos.", ".$total_Oyo.", ".$total_Abuja.", ".$total_Abia.", ".$total_Anambra.", "
+.$total_Benue.", ".$total_Edo.", "
+.$total_Ekiti.", ".$total_Enugu.", "
+.$total_Imo.", ".$total_Jigawa.", "
+.$total_Kaduna.", ".$total_Kano.", "
+.$total_Katsina.", ".$total_Kebbi.", "
+.$total_Kogi.", ".$total_Kwara.", ".$total_Nassarawa.", "
+.$total_Niger.", ".$total_Ogun.", ".$total_Ondo.", "
+.$total_Osun.", ".$total_Plateau.", ".$total_Rivers.", "
+.$total_Sokoto.", ".$total_Zamfara;
 
 
 
@@ -1368,7 +1544,7 @@ plant_data.render();
 // state Interviewed
 var state_int = {
   chart: {
-    height: 350,
+    height: 600,
         type: 'bar',
         toolbar:{
           show: false
@@ -1386,7 +1562,9 @@ var state_int = {
         data: [<?php echo $state_intv ?>]
     }],
     xaxis: {
-        categories: ['Adamawa', 'Akwa Ibom', 'Bauchi', 'Delta', 'Bayelsa', 'Cross River', 'Ebonyi', 'Gombe', 'Yobe', 'Borno', 'Taraba', 'Lagos', 'Oyo'],
+        categories: ['Adamawa', 'Akwa Ibom', 'Bauchi', 'Delta', 'Bayelsa', 'Cross River', 'Ebonyi', 'Gombe', 'Yobe', 'Borno', 'Taraba', 'Lagos', 'Oyo', 
+        'Abuja', 'Abia', 'Anambra', 'Benue', 'Edo', 'Ekiti', 'Enugu', 'Imo', 'Jigawa', 'Kaduna', 'Kano', 'Katsina', 'Kebbi', 
+        'Kogi', 'Kwara', 'Nassarawa', 'Niger', 'Ogun', 'Ondo', 'Osun', 'Plateau', 'Rivers', 'Sokoto', 'Zamfara'],
     }
 }
 
@@ -1417,7 +1595,7 @@ var crop_grown = {
             }
         }
     }],
-    colors:[ '#FE3158', '#a927f9', '#f8d62b']
+    colors:[ '#FE3158', '#a927f9', '#f8d62b', '#f8d62b']
 }
 
 var crop_pie = new ApexCharts(
