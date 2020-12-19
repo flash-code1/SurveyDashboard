@@ -76,11 +76,11 @@ include("header.php");
                     $mmf = mysqli_fetch_array($farmers);
                     $total_farmers = number_format($mmf["all_farm"] * 10);
 
-                    $percent = ($mmf["all_farm"]  /218000) * 100;
+                    $percent = ($mmf["all_farm"]  /208818) * 100;
                     $percent = round($percent);
         
                     ?>
-                    <h5> <a href="state_sorting_farmer.php"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="state_sorting_farmer.php"> <?php echo $total_farmers;?> / 208,818 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
