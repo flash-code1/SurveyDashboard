@@ -132,63 +132,70 @@ if (isset($_GET["id"])) {
                           <h5 class="m-0 f-18">Crops Rice Delivery?: <b> <?php echo $row["Crops_Rice"]; ?> </b> </h5>
                           </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Farmers Rice Delivered: <b> <?php echo $row["FarmerDeliveredCotton"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Farmers Rice Delivered: <b> <?php  $row["FarmerDeliveredCotton"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Farmers Metric Tons Delivered: <b> <?php echo $row["MerticTonRice"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Farmers Metric Tons Delivered: <b> <?php  $row["MerticTonRice"]; ?> </b> </h5>
                           </div>
-                    </div>
+                    </div> -->
                       </div>
                       <div class="row">
+                      <!-- <div class="col-md-4">
+                          <div class="shadow shadow-showcase p-25">
+                          <h5 class="m-0 f-18">Value of Rice Delivered: <b> NGN <?php  number_format($row["TotalValueRice"], 2); ?> </b> </h5>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                          <div class="shadow shadow-showcase p-25">
+                          <h5 class="m-0 f-18">Farmers Delivered Maize: <b> <?php  $row["FarmersDeliveredMaiza"]; ?> </b> </h5>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                          <div class="shadow shadow-showcase p-25">
+                          <h5 class="m-0 f-18">Metric Ton Maize: <b> <?php  $row["MetricTonMaize"]; ?> </b> </h5>
+                          </div>
+                    </div> -->
                       <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Value of Rice Delivered: <b> NGN <?php echo number_format($row["TotalValueRice"], 2); ?> </b> </h5>
+                          <h5 class="m-0 f-18">Value of Maize: <b> NGN<?php echo number_format($row["TotalValueMaize"], 2); ?> </b> </h5>
+                          </div>
+                    </div>
+                    <!-- <div class="col-md-4">
+                          <div class="shadow shadow-showcase p-25">
+                          <h5 class="m-0 f-18">Farmer Delivered Cotton: <b> <?php  $row["FarmerDeliveredCotton"]; ?> </b> </h5>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Farmers Delivered Maize: <b> <?php echo $row["FarmersDeliveredMaiza"]; ?> </b> </h5>
+                          <h5 class="m-0 f-18">Metric Tons Cotton: <b> <?php  $row["MetricTonsCotton"]; ?> </b> </h5>
                           </div>
-                    </div>
-                    <div class="col-md-4">
-                          <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Metric Ton Maize: <b> <?php echo $row["MetricTonMaize"]; ?> </b> </h5>
-                          </div>
-                    </div>
-                      </div>
-                      <div class="row">
-                      <div class="col-md-4">
-                          <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Total Maize Value: <b> NGN<?php echo number_format($row["TotalValueMaize"], 2); ?> </b> </h5>
-                          </div>
-                    </div>
-                    <div class="col-md-4">
-                          <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Farmer Delivered Cotton: <b> <?php echo $row["FarmerDeliveredCotton"]; ?> </b> </h5>
-                          </div>
-                    </div>
-                    <div class="col-md-4">
-                          <div class="shadow shadow-showcase p-25">
-                          <h5 class="m-0 f-18">Metric Tons Cotton: <b> <?php echo $row["MetricTonsCotton"]; ?> </b> </h5>
-                          </div>
-                    </div>
+                    </div> -->
                     <div class="col-md-4">
                           <div class="shadow shadow-showcase p-25">
                           <h5 class="m-0 f-18">Value of Cotton: <b> NGN<?php echo number_format($row["valueCotton"], 2); ?> </b> </h5>
                           </div>
                     </div>
+                    <div class="col-md-4">
+                          <div class="shadow shadow-showcase p-25">
+                          <h5 class="m-0 f-18">Value of Rice: <b> NGN<?php echo number_format($row["TotalValueRice"], 2); ?> </b> </h5>
+                          </div>
+                    </div>
                       </div>
 
                       <div class="row">
-                          <div class="col-md-12">
+                      <div class="col-md-4">
+                          </div>
+                          <div class="col-md-4">
                               <div class="shadow shadow-showcase p-25">
-                                  <h5 class="m-0 f-18">Image of Warehouse</h5>
+                                <center>
+                                  <h5 class="m-0 f-18">View on Map </h5>
                                   <br>
-                                  <img src="<?php echo $row["WarehousePicture"] ?>" height="100%" width="100%" alt="">
+                    <a href="https://maps.google.com/?q=<?php echo $row["CurrentLocationLatitude"].",".$row["CurrentLocationLongitude"]; ?>" target="blank" class="btn btn-pill btn-primary btn-air-primary btn-primary-gradien">View Map</a>
+                                </center>
                               </div>
                              
                           </div>

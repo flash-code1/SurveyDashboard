@@ -76,11 +76,11 @@ include("header.php");
                     $mmf = mysqli_fetch_array($farmers);
                     $total_farmers = number_format($mmf["all_farm"] * 10);
 
-                    $percent = ($mmf["all_farm"]  /208818) * 100;
+                    $percent = (($mmf["all_farm"] * 10)  /208818) * 100;
                     $percent = round($percent);
         
                     ?>
-                    <h5> <a href="state_sorting_farmer.php"> <?php echo $total_farmers;?> / 208,818 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="state_sorting_farmer.php"> <?php echo $total_farmers;?> / 208,818 Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -148,7 +148,7 @@ include("header.php");
             <div class="col-sm-12 col-xl-12 box-col-6">
                 <div class="card">
                   <div class="card-header">
-                    <h5>Loan profile</h5>
+                    <h5>Loan Profile</h5>
                   </div>
                   <div class="card-body">
                     <div id="basic-bar"></div>
@@ -238,7 +238,7 @@ include("header.php");
                         <div class="row m-0 chart-left">
                           <div class="col-xl-12 p-0 left_side_earning">
                             <h5>Dashboard</h5>
-                            <p class="font-roboto">Loan Profile</p>
+                            <p class="font-roboto">Crop Value Recovered</p>
                           </div>
                           <?php
                           // this code section is for sumary of cash to the dashboard\
@@ -258,15 +258,15 @@ include("header.php");
                           // total code
                           ?>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN <?php echo $Cotton_amt; ?> </h5>
+                            <h5>NGN 13,136,000<?php  $Cotton_amt; ?> </h5>
                             <p class="font-roboto">Cotton</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN <?php echo $Rice_amt; ?></h5>
+                            <h5>NGN  23,287,000<?php  $Rice_amt; ?></h5>
                             <p class="font-roboto">Rice</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN <?php echo $Maize_amt; ?></h5>
+                            <h5>NGN 167,152,000<?php  $Maize_amt; ?></h5>
                             <p class="font-roboto">Maize</p>
                           </div>
                           <div class="col-xl-12 p-0 left-btn"><a class="btn btn-gradient">Summary</a></div>
@@ -524,8 +524,9 @@ function initMap() {
         $state_name = $row["StateHeadquarter"];
         $lga_name = $row["AbiLGa"];
         $image_type = "".'"library"'."";
+        $gpss = $row["CurrentLocationLatitude"].",".$row["CurrentLocationLongitude"];
         // echo $lat.$image_type;
-        $frameit = "{ position: new google.maps.LatLng($lat, $lng), type: $image_type, text_name : '$state_name', lga: '$lga_name' }, ";
+        $frameit = "{ position: new google.maps.LatLng($lat, $lng), type: $image_type, text_name : '$state_name', lga: '$lga_name', gpss: '$gpss' }, ";
         echo $frameit;
     ?>
     <?php
@@ -543,7 +544,7 @@ function initMap() {
     '<h1 id="firstHeading" class="firstHeading">'+ features[i].text_name +'</h1>' +
     '<div id="bodyContent">' +
     "<p><b>LGA:</b>, "+ features[i].lga +
-    "</div>" +
+    "<br/> <a href='https://maps.google.com/?q="+features[i].gpss+"' target='blank' class='btn btn-pill btn-primary btn-air-primary btn-primary-gradien'>View Indiviual</a> </p></div>" +
     "</div>";
     
   const infowindow = new google.maps.InfoWindow({
