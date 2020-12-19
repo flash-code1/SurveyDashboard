@@ -74,9 +74,9 @@ include("header.php");
                     FROM
                     `survey_data`");
                     $mmf = mysqli_fetch_array($farmers);
-                    $total_farmers = number_format($mmf["all_farm"]);
+                    $total_farmers = number_format($mmf["all_farm"] * 10);
 
-                    $percent = ($mmf["all_farm"]/218000) * 100;
+                    $percent = ($mmf["all_farm"]  /218000) * 100;
                     $percent = round($percent);
         
                     ?>
@@ -169,7 +169,7 @@ include("header.php");
               <div class="col-sm-12 col-xl-6 box-col-6">
                 <div class="card">
                   <div class="card-header">
-                    <h5>Crop Grown </h5>
+                    <h5>Crops Delivered to Warehouse </h5>
                   </div>
                   <div class="card-body apex-chart">
                     <div id="crop_g"></div>
