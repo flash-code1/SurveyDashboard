@@ -723,28 +723,28 @@ $three_month = date('M', strtotime($three_date));
 
 
 // LAND CLEARING
-$select_land_current = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date')");
+$select_land_current = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (SubmissionDate  > '$last_date') AND (SubmissionDate  <= '$current_date')");
 $qx = mysqli_fetch_array($select_land_current);
 $land_clear_current = $qx["land_clear"];
 if ($land_clear_current == "") {
   $land_clear_current = 0;
 }
 // clearing data one moneth
-$select_land_last = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date')");
+$select_land_last = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (SubmissionDate  > '$two_date') AND (SubmissionDate  <= '$last_date')");
 $qxx = mysqli_fetch_array($select_land_last);
 $land_clear_last = $qxx["land_clear"];
 if ($land_clear_last == "") {
   $land_clear_last = 0;
 }
 // two month
-$select_land_two = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date')");
+$select_land_two = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (SubmissionDate  > '$three_date') AND (SubmissionDate  <= '$two_date')");
 $qxxx = mysqli_fetch_array($select_land_two);
 $land_clear_two = $qxxx["land_clear"];
 if ($land_clear_two == "") {
   $land_clear_two = 0;
 }
 // 4th month
-$select_land_three = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date')");
+$select_land_three = mysqli_query($con, "SELECT SUM(LandClearing) as land_clear FROM `survey_data` WHERE (SubmissionDate  > '$final_date') AND (SubmissionDate  <= '$three_date')");
 $qxxxx = mysqli_fetch_array($select_land_three);
 $land_clear_three = $qxxxx["land_clear"];
 if ($land_clear_three == "") {
@@ -754,28 +754,28 @@ if ($land_clear_three == "") {
 //  echo $land_clear_three." ,".$land_clear_two." ,". $land_clear_last." ,".$land_clear_current."--"; 
 
 // HarrowingG
-$select_harrow_current = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date')");
+$select_harrow_current = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (SubmissionDate  > '$last_date') AND (SubmissionDate  <= '$current_date')");
 $hx = mysqli_fetch_array($select_harrow_current);
 $harrow_current = $hx["harrow"];
 if ($harrow_current == "") {
   $harrow_current = 0;
 }
 // clearing data one moneth
-$select_harrow_last = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date')");
+$select_harrow_last = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (SubmissionDate  > '$two_date') AND (SubmissionDate  <= '$last_date')");
 $hxx = mysqli_fetch_array($select_harrow_last);
 $harrow_last = $hxx["harrow"];
 if ($harrow_last == "") {
   $harrow_last = 0;
 }
 // two month
-$select_harrow_two = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date')");
+$select_harrow_two = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (SubmissionDate  > '$three_date') AND (SubmissionDate  <= '$two_date')");
 $hxxx = mysqli_fetch_array($select_harrow_two);
 $harrow_two = $hxxx["harrow"];
 if ($harrow_two == "") {
   $harrow_two = 0;
 }
 // 4th month
-$select_harrow_three = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date')");
+$select_harrow_three = mysqli_query($con, "SELECT SUM(Harrowing) as harrow FROM `survey_data` WHERE (SubmissionDate  > '$final_date') AND (SubmissionDate  <= '$three_date')");
 $hxxxx = mysqli_fetch_array($select_harrow_three);
 $harrow_three = $hxxxx["harrow"];
 if ($harrow_three == "") {
@@ -785,28 +785,28 @@ if ($harrow_three == "") {
 //  echo $land_clear_three." ,".$land_clear_two." ,". $land_clear_last." ,".$land_clear_current."--"; 
 
 // Planting
-$select_plant_current = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date')");
+$select_plant_current = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (SubmissionDate  > '$last_date') AND (SubmissionDate  <= '$current_date')");
 $px = mysqli_fetch_array($select_plant_current);
 $plant_current = $px["plant"];
 if ($plant_current == "") {
   $plant_current = 0;
 }
 // clearing data one moneth
-$select_plant_last = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date')");
+$select_plant_last = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (SubmissionDate  > '$two_date') AND (SubmissionDate  <= '$last_date')");
 $pxx = mysqli_fetch_array($select_plant_last);
 $plant_last = $pxx["plant"];
 if ($plant_last == "") {
   $plant_last = 0;
 }
 // two month
-$select_plant_two = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date')");
+$select_plant_two = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (SubmissionDate  > '$three_date') AND (SubmissionDate  <= '$two_date')");
 $pxxx = mysqli_fetch_array($select_plant_two);
 $plant_two = $pxxx["plant"];
 if ($plant_two == "") {
   $plant_two = 0;
 }
 // 4th month
-$select_plant_three = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date')");
+$select_plant_three = mysqli_query($con, "SELECT SUM(Planting) as plant FROM `survey_data` WHERE (SubmissionDate  > '$final_date') AND (SubmissionDate  <= '$three_date')");
 $pxxxx = mysqli_fetch_array($select_plant_three);
 $plant_three = $pxxxx["plant"];
 if ($plant_three == "") {
@@ -815,28 +815,28 @@ if ($plant_three == "") {
 
 
 // HARVESTING
-$select_harvest_current = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date') AND harvested = 'Yes'");
+$select_harvest_current = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (SubmissionDate  > '$last_date') AND (SubmissionDate  <= '$current_date') AND harvested = 'Yes'");
 $hax = mysqli_fetch_array($select_harvest_current);
 $harvest_current = $hax["harvest"];
 if ($harvest_current == "") {
   $harvest_current = 0;
 }
 // clearing data one moneth
-$select_harvest_last = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date') AND harvested = 'Yes'");
+$select_harvest_last = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (SubmissionDate  > '$two_date') AND (SubmissionDate  <= '$last_date') AND harvested = 'Yes'");
 $haxx = mysqli_fetch_array($select_harvest_last);
 $harvest_last = $haxx["harvest"];
 if ($harvest_last == "") {
   $harvest_last = 0;
 }
 // two month
-$select_harvest_two = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date') AND harvested = 'Yes'");
+$select_harvest_two = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (SubmissionDate  > '$three_date') AND (SubmissionDate  <= '$two_date') AND harvested = 'Yes'");
 $haxxx = mysqli_fetch_array($select_harvest_two);
 $harvest_two = $haxxx["harvest"];
 if ($harvest_two == "") {
   $harvest_two = 0;
 }
 // 4th month
-$select_harvest_three = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date') AND harvested = 'Yes'");
+$select_harvest_three = mysqli_query($con, "SELECT COUNT(*) as harvest FROM `survey_data` WHERE (SubmissionDate  > '$final_date') AND (SubmissionDate  <= '$three_date') AND harvested = 'Yes'");
 $haxxxx = mysqli_fetch_array($select_harvest_three);
 $harvest_three = $haxxxx["harvest"];
 if ($harvest_three == "") {
@@ -846,28 +846,28 @@ if ($harvest_three == "") {
 
 // OTHERS
 // othering
-$select_other_current = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (CurrentDate > '$last_date') AND (CurrentDate <= '$current_date')");
+$select_other_current = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (SubmissionDate  > '$last_date') AND (SubmissionDate  <= '$current_date')");
 $ox = mysqli_fetch_array($select_other_current);
 $other_current = $ox["other"];
 if ($other_current == "") {
   $other_current = 0;
 }
 // clearing data one moneth
-$select_other_last = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (CurrentDate > '$two_date') AND (CurrentDate <= '$last_date')");
+$select_other_last = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (SubmissionDate  > '$two_date') AND (SubmissionDate  <= '$last_date')");
 $oxx = mysqli_fetch_array($select_other_last);
 $other_last = $oxx["other"];
 if ($other_last == "") {
   $other_last = 0;
 }
 // two month
-$select_other_two = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (CurrentDate > '$three_date') AND (CurrentDate <= '$two_date')");
+$select_other_two = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (SubmissionDate  > '$three_date') AND (SubmissionDate  <= '$two_date')");
 $oxxx = mysqli_fetch_array($select_other_two);
 $other_two = $oxxx["other"];
 if ($other_two == "") {
   $other_two = 0;
 }
 // 4th month
-$select_other_three = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (CurrentDate > '$final_date') AND (CurrentDate <= '$three_date')");
+$select_other_three = mysqli_query($con, "SELECT SUM(OtherSs) as other FROM `survey_data` WHERE (SubmissionDate  > '$final_date') AND (SubmissionDate  <= '$three_date')");
 $oxxxx = mysqli_fetch_array($select_other_three);
 $other_three = $oxxxx["other"];
 if ($other_three == "") {
