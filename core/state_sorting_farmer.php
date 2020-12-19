@@ -1,3 +1,4 @@
+  
 <?php
 $web_title = "State View";
 include("header.php");
@@ -75,13 +76,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -108,13 +109,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -141,13 +142,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -174,13 +175,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -208,13 +209,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -242,13 +243,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -276,13 +277,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -309,13 +310,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -342,13 +343,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -376,13 +377,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -409,13 +410,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -442,13 +443,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -476,13 +477,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -510,13 +511,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -544,13 +545,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -577,13 +578,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -610,13 +611,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -643,13 +644,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -676,13 +677,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -708,13 +709,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -741,13 +742,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -773,13 +774,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -806,13 +807,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -839,13 +840,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -871,13 +872,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -904,13 +905,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -937,13 +938,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -970,13 +971,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1003,13 +1004,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1036,13 +1037,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1069,13 +1070,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1102,13 +1103,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1135,13 +1136,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1168,13 +1169,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1201,13 +1202,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1234,13 +1235,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1267,13 +1268,13 @@ include("header.php");
                           $mmf = mysqli_fetch_array($farmers);
                           $total_farmers = number_format($mmf["all_farm"]);
       
-                          $percent = ($mmf["all_farm"]/37) * 100;
+                          $percent = ($mmf["all_farm"]/218000) * 100;
                           $percent = round($percent);
                           ?>
                           <b> 
                               <!-- FARMERS -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_farmers;?> / 37 States</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_farmers;?> / 218,000 Est. Farmers</a></h5><span> <b> Total Farmers Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">

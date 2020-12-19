@@ -75,13 +75,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -108,13 +108,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -141,13 +141,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -174,13 +174,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -208,13 +208,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -242,13 +242,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -276,13 +276,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -309,13 +309,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -342,13 +342,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -376,13 +376,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -409,13 +409,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -442,13 +442,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -476,13 +476,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -510,13 +510,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -544,13 +544,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -577,13 +577,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -610,13 +610,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -643,13 +643,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -676,13 +676,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -708,13 +708,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -741,13 +741,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -773,13 +773,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -806,13 +806,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -839,13 +839,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -871,13 +871,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -904,13 +904,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -937,13 +937,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -970,13 +970,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1003,13 +1003,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1036,13 +1036,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1069,13 +1069,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1102,13 +1102,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1135,13 +1135,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1168,13 +1168,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1201,13 +1201,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1234,13 +1234,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
@@ -1267,13 +1267,13 @@ include("header.php");
                           $mh = mysqli_fetch_array($house);
                     $total_house = number_format($mh["all_house"]);
 
-                    $percentx = ($mh["all_house"]/37) * 100;
+                    $percentx = ($mh["all_house"]/60) * 100;
                     $percentx = round($percentx);
                           ?>
                           <b> 
                               <!-- Warehouse -->
                               <div class="card-header">
-                    <h5> <a href="#"> <?php echo $total_house; ?> / 37 States</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
+                    <h5> <a href="#"> <?php echo $total_house; ?> / 60 Active Est. Warehouse</a></h5><span> <b> Total Warehouse Surveyed </b>  </span>
                   </div>
                   <div class="card-body progress-showcase row">
                     <div class="col">
