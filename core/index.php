@@ -258,15 +258,15 @@ include("header.php");
                           // total code
                           ?>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN 13,136,000<?php  $Cotton_amt; ?> </h5>
+                            <h5>NGN <?php echo $Cotton_amt; ?> </h5>
                             <p class="font-roboto">Cotton</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN  23,287,000<?php  $Rice_amt; ?></h5>
+                            <h5>NGN  <?php echo $Rice_amt; ?></h5>
                             <p class="font-roboto">Rice</p>
                           </div>
                           <div class="col-xl-12 p-0 left_side_earning">
-                            <h5>NGN 167,152,000<?php  $Maize_amt; ?></h5>
+                            <h5>NGN  <?php echo $Maize_amt; ?></h5>
                             <p class="font-roboto">Maize</p>
                           </div>
                           <div class="col-xl-12 p-0 left-btn"><a class="btn btn-gradient">Summary</a></div>
